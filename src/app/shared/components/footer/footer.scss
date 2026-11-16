@@ -1,0 +1,130 @@
+@use 'tokens' as *;
+
+:host {
+  display: block;
+}
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  background: #2e1f23;
+  background: linear-gradient(170deg, #3a252b 0%, #2a1b1f 100%);
+  color: rgba(255, 240, 236, 0.78);
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0 calc(1.5rem + env(safe-area-inset-bottom));
+
+  &.compact {
+    padding-top: 2rem;
+  }
+}
+
+.glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -160px;
+  top: -220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(183, 110, 121, 0.35), transparent 65%);
+  pointer-events: none;
+}
+
+.brand {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1.1rem;
+}
+
+.blurb {
+  max-width: 34ch;
+  font-size: 0.95rem;
+}
+
+.col-title {
+  font-family: $font-body;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #e9c6b5;
+  margin-bottom: 1.1rem;
+}
+
+.links,
+.contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+
+  a {
+    color: rgba(255, 240, 236, 0.82);
+    text-decoration: none;
+    transition: color 0.2s;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.contact li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  app-icon {
+    color: #e9c6b5;
+    margin-top: 0.25rem;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 0.6rem;
+  a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: 1px solid rgba(233, 198, 181, 0.35);
+    transition:
+      background-color 0.25s $ease,
+      transform 0.25s $ease;
+    &:hover {
+      background: $rose;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(233, 198, 181, 0.16);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.85rem;
+  padding-right: 4.5rem; // keep clear of the floating chat button
+
+  p {
+    margin: 0;
+  }
+  a {
+    color: #e9c6b5;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .compact & {
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
+  }
+}

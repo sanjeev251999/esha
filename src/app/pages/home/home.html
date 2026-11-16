@@ -1,0 +1,208 @@
+<!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+<section class="hero" aria-labelledby="hero-title">
+  <img class="hero-bg" src="assets/images/hero/hero-bg.webp" alt="" width="960" height="640" fetchpriority="high" decoding="async" />
+  <div class="hero-veil" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="row align-items-center g-4 g-lg-5">
+      <div class="col-lg-7 hero-copy">
+        <p class="eyebrow rise">Bridal · Makeup · Hair · Skin</p>
+        <h1 id="hero-title" class="rise" style="--rise-delay: 0.08s">
+          <span class="brand-line">{{ b.name }}</span>
+          Unveil your most <em>beautiful</em> self
+        </h1>
+        <p class="lead-text rise" style="--rise-delay: 0.16s">
+          From bridal glamour to everyday glow, our salon offers personalised makeup, hair and skin care in a calm, welcoming space — so you can
+          look and feel your absolute best.
+        </p>
+        <div class="hero-ctas rise" style="--rise-delay: 0.24s">
+          <a class="btn-esha btn-rose btn-lg" appEnquireLink>
+            Enquire Now <app-icon name="arrow" />
+          </a>
+          @if (waLink) {
+            <a class="btn-esha btn-wa btn-lg" [href]="waLink" target="_blank" rel="noopener"><app-icon name="whatsapp" /> WhatsApp</a>
+          }
+          <a class="btn-esha btn-outline-rose btn-lg" routerLink="/services">Explore Services</a>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="hero-visual rise" style="--rise-delay: 0.2s">
+          <div class="arch-frame portrait">
+            <img
+              src="assets/images/hero/hero-portrait.webp"
+              alt="Bride with soft makeup holding a bouquet of white flowers"
+              width="720"
+              height="900"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <div class="arch-outline" aria-hidden="true"></div>
+          <div class="chip chip-1"><app-icon name="gem" /> Bridal Makeup</div>
+          <div class="chip chip-2"><app-icon name="sparkles" /> Hair &amp; Skin Care</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HIGHLIGHTS ───────────────────────────────────────────────────────── -->
+<section class="highlights" aria-label="What we offer">
+  <div class="container">
+    <ul class="hl-grid">
+      @for (h of highlights; track h.title; let i = $index) {
+        <li [appReveal]="i * 80 + 'ms'">
+          <span class="hl-icon"><app-icon [name]="h.icon" size="1.35rem" /></span>
+          <div>
+            <strong>{{ h.title }}</strong>
+            <span>{{ h.text }}</span>
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<!-- ── ABOUT TEASER ─────────────────────────────────────────────────────── -->
+<section class="section about-teaser" aria-labelledby="about-title">
+  <div class="container">
+    <div class="row align-items-center g-4 g-lg-5">
+      <div class="col-lg-6 order-lg-2">
+        <app-section-heading
+          align="start"
+          eyebrow="Welcome to Esha"
+          title="A little paradise for"
+          accent="your beauty"
+          headingId="about-title"
+        />
+        <div appReveal>
+          <p class="lead-text">
+            {{ b.name }} is a beauty salon created for women who want to feel cared for. Whether you are preparing for your wedding, getting
+            ready for a celebration or simply treating yourself, we give every client personal attention and a look that feels like them.
+          </p>
+          <p class="text-body-secondary">
+            Our services cover bridal and party makeup, hair styling, hair spa and treatments, facials, skin care and everyday beauty
+            essentials.
+          </p>
+          <a class="btn-link-rose mt-2" routerLink="/about">Discover our story <app-icon name="arrow" /></a>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="collage" appReveal>
+          <div class="arch-frame main">
+            <img src="assets/images/about/about-main.webp" alt="Makeup brushes in a lace holder on soft white fur" width="720" height="900" loading="lazy" decoding="async" />
+          </div>
+          <div class="round secondary">
+            <img src="assets/images/about/about-secondary.webp" alt="Woman preparing natural skin care at a bright table" width="600" height="600" loading="lazy" decoding="async" />
+          </div>
+          <div class="quote">
+            <app-icon name="flower" size="1.4rem" />
+            <span>Beauty that feels like <em>you</em></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ─────────────────────────────────────────────────────────── -->
+<section class="section bg-blush" aria-labelledby="services-title">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Our Services"
+      title="Crafted for every"
+      accent="occasion"
+      intro="Explore our most-loved services. Tap Enquire Now and we will share availability and details on WhatsApp."
+      headingId="services-title"
+    />
+    <div class="row g-4">
+      @for (s of featured; track s.id; let i = $index) {
+        <div class="col-md-6 col-lg-4">
+          <app-service-card [service]="s" [delay]="(i % 3) * 90 + 'ms'" />
+        </div>
+      }
+    </div>
+    <div class="text-center mt-5" appReveal>
+      <a class="btn-esha btn-outline-rose" routerLink="/services">View all services <app-icon name="arrow" /></a>
+    </div>
+  </div>
+</section>
+
+<!-- ── OFFERS ───────────────────────────────────────────────────────────── -->
+<section class="offers-band" aria-labelledby="offers-title">
+  <img class="offers-bg" src="assets/images/offers/offers-banner.webp" alt="" width="960" height="641" loading="lazy" decoding="async" />
+  <div class="offers-veil" aria-hidden="true"></div>
+  <div class="container position-relative">
+    <div class="row g-4 align-items-end mb-4">
+      <div class="col-lg-7" appReveal>
+        <p class="eyebrow light">Special Offers</p>
+        <h2 id="offers-title" class="display-title text-white">Seasonal offers &amp; <em>packages</em></h2>
+        <p class="lead-text light mb-0">Thoughtfully curated packages for brides, celebrations and self-care. Message us for this month's offers.</p>
+      </div>
+      <div class="col-lg-5 text-lg-end" appReveal>
+        <a class="btn-esha btn-outline-light-rose" routerLink="/offers">See all offers <app-icon name="arrow" /></a>
+      </div>
+    </div>
+    <div class="row g-4">
+      @for (o of offers; track o.id; let i = $index) {
+        <div class="col-md-6 col-lg-4">
+          <app-offer-card [offer]="o" [delay]="i * 90 + 'ms'" />
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ── PROMISE ──────────────────────────────────────────────────────────── -->
+<section class="section" aria-labelledby="promise-title">
+  <div class="container">
+    <app-section-heading eyebrow="Our Promise" title="Care you can" accent="feel" headingId="promise-title" />
+    <div class="row g-4">
+      @for (p of promises; track p.title; let i = $index) {
+        <div class="col-sm-6 col-lg-3">
+          <div class="promise" [appReveal]="i * 80 + 'ms'">
+            <span class="p-icon"><app-icon [name]="p.icon" size="1.5rem" /></span>
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.text }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY PREVIEW ──────────────────────────────────────────────────── -->
+<section class="section bg-champagne pt-0 pt-lg-0" aria-labelledby="gallery-title">
+  <div class="container pt-5">
+    <app-section-heading eyebrow="Gallery" title="Moments of" accent="beauty" headingId="gallery-title" />
+    <app-gallery-grid [images]="gallery" [limit]="8" />
+    <div class="text-center mt-4" appReveal>
+      <a class="btn-esha btn-outline-rose" routerLink="/gallery">View full gallery <app-icon name="arrow" /></a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ENQUIRY ──────────────────────────────────────────────────────────── -->
+<section class="section enquiry-section" id="enquiry" aria-label="Enquiry form">
+  <div class="container">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-7" appReveal>
+        <app-enquiry-form />
+      </div>
+      <div class="col-lg-5" appReveal="120ms">
+        <app-contact-info [showMap]="false" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSTAGRAM ────────────────────────────────────────────────────────── -->
+<section class="insta-band" aria-labelledby="insta-title">
+  <div class="container text-center" appReveal>
+    <span class="insta-icon"><app-icon name="instagram" size="1.6rem" /></span>
+    <h2 id="insta-title" class="display-title">Follow our <em>latest looks</em></h2>
+    <p class="lead-text mx-auto">See our newest bridal looks, offers and salon moments on Instagram.</p>
+    <a class="btn-esha btn-rose" [href]="b.instagramUrl" target="_blank" rel="noopener"><app-icon name="instagram" /> {{ b.instagramHandle }}</a>
+  </div>
+</section>

@@ -1,0 +1,405 @@
+// ─────────────────────────────────────────────────────────────────────────────
+//  Brand-level global styles: typography, buttons, sections, shared utilities.
+// ─────────────────────────────────────────────────────────────────────────────
+@use 'tokens' as *;
+
+:root {
+  --esha-rose: #{$rose};
+  --esha-rose-deep: #{$rose-deep};
+  --esha-ink: #{$ink};
+  --esha-header-h: #{$header-h-mobile};
+  @include up($bp-lg) {
+    --esha-header-h: #{$header-h};
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--esha-header-h) + 12px);
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: $font-body;
+  background: $ivory;
+  color: $ink;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: $blush;
+  color: $rose-ink;
+}
+
+:focus-visible {
+  outline: 2px solid $rose;
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-display;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+}
+
+// ── Skip link ───────────────────────────────────────────────────────────────
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 2000;
+  padding: 0.6rem 1rem;
+  background: $rose-deep;
+  color: #fff;
+  border-radius: $radius-sm;
+  &:focus {
+    top: 1rem;
+    color: #fff;
+  }
+}
+
+// ── Sections & typography helpers ───────────────────────────────────────────
+.section {
+  padding-block: clamp(4rem, 9vw, 7rem);
+  position: relative;
+}
+
+.section-tight {
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+}
+
+.bg-blush {
+  background: $blush-gradient;
+}
+
+.bg-champagne {
+  background: linear-gradient(180deg, $champagne-soft 0%, $ivory 100%);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: $font-body;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: $rose-deep;
+  margin-bottom: 0.9rem;
+
+  &::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: $metal-gradient;
+  }
+}
+
+.display-title {
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+
+  em {
+    font-style: italic;
+    font-weight: 500;
+    color: $rose-deep;
+  }
+}
+
+.lead-text {
+  font-size: clamp(1.02rem, 1.4vw, 1.12rem);
+  color: $ink-soft;
+  font-weight: 400;
+  max-width: 62ch;
+}
+
+.text-rose {
+  color: $rose-deep !important;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  color: $rose;
+  margin: 0.4rem 0 1.4rem;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 54px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $rose);
+  }
+  &::after {
+    transform: scaleX(-1);
+  }
+  span {
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    background: $metal-gradient;
+  }
+}
+
+// ── Buttons ─────────────────────────────────────────────────────────────────
+.btn-esha {
+  --pad-y: 0.85rem;
+  --pad-x: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: var(--pad-y) var(--pad-x);
+  min-height: 48px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-family: $font-body;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.3s $ease,
+    box-shadow 0.3s $ease,
+    background-color 0.3s $ease,
+    color 0.3s $ease,
+    border-color 0.3s $ease;
+  white-space: nowrap;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+  &:disabled,
+  &[aria-disabled='true'] {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &.btn-sm {
+    --pad-y: 0.6rem;
+    --pad-x: 1.15rem;
+    min-height: 42px;
+    font-size: 0.88rem;
+  }
+  &.btn-lg {
+    --pad-y: 1rem;
+    --pad-x: 2rem;
+    font-size: 1rem;
+  }
+  &.w-100 {
+    white-space: normal;
+  }
+}
+
+// Primary: rose-gold metal with a soft sheen sweep on hover
+.btn-rose {
+  color: #fff;
+  background: linear-gradient(135deg, #a35a66 0%, #8e4a55 55%, #7a3c48 100%);
+  box-shadow: 0 10px 24px -10px rgba(142, 74, 85, 0.65);
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(110deg, transparent 30%, rgba(255, 236, 226, 0.45) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.8s $ease;
+  }
+  &:hover {
+    color: #fff;
+    box-shadow: 0 16px 30px -12px rgba(142, 74, 85, 0.75);
+    &::after {
+      transform: translateX(120%);
+    }
+  }
+}
+
+.btn-outline-rose {
+  color: $rose-deep;
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(183, 110, 121, 0.55);
+  backdrop-filter: blur(6px);
+
+  &:hover {
+    color: #fff;
+    background: $rose-deep;
+    border-color: $rose-deep;
+  }
+}
+
+.btn-wa {
+  color: #fff;
+  background: $whatsapp;
+  box-shadow: 0 10px 22px -10px rgba(22, 138, 69, 0.6);
+
+  &:hover {
+    color: #fff;
+    background: #11773b;
+  }
+}
+
+.btn-link-rose {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: $rose-deep;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  svg {
+    transition: transform 0.3s $ease;
+  }
+  &:hover {
+    color: $rose-ink;
+    svg {
+      transform: translateX(4px);
+    }
+  }
+}
+
+// ── Shared surfaces ─────────────────────────────────────────────────────────
+.card-soft {
+  background: #fff;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow-soft;
+}
+
+.arch-frame {
+  @include arch();
+  overflow: hidden;
+  position: relative;
+}
+
+// ── Page hero (inner pages) ─────────────────────────────────────────────────
+.page-hero {
+  position: relative;
+  padding-top: calc(var(--esha-header-h) + clamp(3rem, 7vw, 5rem));
+  padding-bottom: clamp(3rem, 6vw, 4.5rem);
+  background:
+    radial-gradient(60% 80% at 85% 10%, rgba(239, 220, 192, 0.7) 0%, transparent 60%),
+    radial-gradient(50% 70% at 5% 90%, rgba(246, 223, 219, 0.9) 0%, transparent 60%),
+    $ivory;
+  text-align: center;
+  overflow: hidden;
+
+  .lead-text {
+    margin-inline: auto;
+  }
+}
+
+.breadcrumb-lite {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: $ink-soft;
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+  a {
+    color: $rose-deep;
+    text-decoration: none;
+  }
+  li + li::before {
+    content: '/';
+    margin-right: 0.5rem;
+    color: $line;
+  }
+}
+
+// ── Scroll reveal (enabled only when JS is running – see RevealDirective) ──
+.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.9s $ease,
+    transform 0.9s $ease;
+  transition-delay: var(--reveal-delay, 0s);
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// ── Load-in animation for above-the-fold content (pure CSS, no JS needed) ──
+@keyframes esha-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: esha-rise 0.9s $ease both;
+  animation-delay: var(--rise-delay, 0s);
+}
+
+// ── Forms ──────────────────────────────────────────────────────────────────
+.form-control,
+.form-select {
+  min-height: 50px;
+  font-size: 1rem; // 16px prevents iOS zoom on focus
+}
+
+.form-label {
+  font-size: 0.9rem;
+  color: $ink;
+}
+
+.required-mark {
+  color: $rose-deep;
+}
+
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+}

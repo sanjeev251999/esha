@@ -1,0 +1,9 @@
+<a class="skip-link" href="#main">Skip to main content</a>
+<app-header [mode]="layout()" />
+<main id="main" tabindex="-1">
+  <router-outlet />
+</main>
+<app-footer [mode]="layout()" />
+@if (layout() === 'full') {
+  <app-whatsapp-float />
+}

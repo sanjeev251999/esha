@@ -1,0 +1,121 @@
+<!-- HERO -->
+<section class="lp-hero" aria-labelledby="lp-title">
+  <div class="container">
+    <div class="row g-4 g-lg-5 align-items-center">
+      <div class="col-lg-6">
+        <p class="eyebrow rise">{{ b.name }}</p>
+        <h1 id="lp-title" class="rise" style="--rise-delay: 0.06s">Look stunning for <em>every occasion</em></h1>
+        <p class="lead-text rise" style="--rise-delay: 0.12s">
+          Bridal &amp; party makeup, hair styling, hair spa, facials and skin care — personalised for you. Enquire now and get details on
+          WhatsApp.
+        </p>
+        <div class="ctas rise" style="--rise-delay: 0.18s">
+          <button type="button" class="btn-esha btn-rose btn-lg" (click)="pick(null)">Enquire Now <app-icon name="arrow" /></button>
+          @if (waLink) {
+            <a class="btn-esha btn-wa btn-lg" [href]="waLink" target="_blank" rel="noopener"><app-icon name="whatsapp" /> Chat on WhatsApp</a>
+          }
+        </div>
+        <ul class="ticks rise" style="--rise-delay: 0.24s">
+          <li><app-icon name="check" /> Personal consultation</li>
+          <li><app-icon name="check" /> Bridal &amp; party looks</li>
+          <li><app-icon name="check" /> Easy WhatsApp booking</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="lp-visual rise">
+          <div class="arch-frame">
+            <img
+              src="assets/images/hero/hero-portrait.webp"
+              alt="Bride with soft makeup holding a bouquet"
+              width="720"
+              height="900"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <div class="badge-float"><app-icon name="sparkles" /> Bookings open</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE PICKER -->
+<section class="section-tight" aria-labelledby="pick-title">
+  <div class="container">
+    <div class="text-center mb-4" appReveal>
+      <p class="eyebrow">Our Services</p>
+      <h2 id="pick-title" class="display-title">What are you <em>looking for?</em></h2>
+      <p class="text-body-secondary mb-0">Tap a service to start your enquiry.</p>
+    </div>
+    <ul class="picker">
+      @for (s of services; track s.id; let i = $index) {
+        <li [appReveal]="(i % 3) * 60 + 'ms'">
+          <button type="button" (click)="pick(s.id)" [attr.aria-label]="'Enquire about ' + s.name">
+            <img [src]="s.image" [alt]="" width="800" height="600" loading="lazy" decoding="async" />
+            <span class="name">{{ s.name }}</span>
+            <span class="go"><app-icon name="arrow" size="0.9em" /></span>
+          </button>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section class="section-tight bg-blush" aria-labelledby="lp-offers-title">
+  <div class="container">
+    <div class="text-center mb-4" appReveal>
+      <p class="eyebrow">Special Offers</p>
+      <h2 id="lp-offers-title" class="display-title">Packages &amp; <em>offers</em></h2>
+    </div>
+    <div class="offer-scroller">
+      @for (o of offers; track o.id) {
+        <div class="offer-cell"><app-offer-card [offer]="o" /></div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section-tight" id="enquiry" aria-label="Enquiry form">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8" appReveal>
+        <app-enquiry-form heading="Get your free consultation" subheading="Fill in your details — WhatsApp opens with your enquiry ready to send." />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section-tight bg-champagne" aria-labelledby="lp-gallery-title">
+  <div class="container">
+    <div class="text-center mb-4" appReveal>
+      <p class="eyebrow">Gallery</p>
+      <h2 id="lp-gallery-title" class="display-title">A glimpse of <em>our work</em></h2>
+    </div>
+    <app-gallery-grid [images]="gallery" [limit]="6" />
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-tight" aria-label="Contact details">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8" appReveal>
+        <app-contact-info [showMap]="false" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta d-lg-none" role="region" aria-label="Quick enquiry">
+  <button type="button" class="btn-esha btn-rose" (click)="pick(null)">Enquire Now</button>
+  @if (waLink) {
+    <a class="btn-esha btn-wa" [href]="waLink" target="_blank" rel="noopener"><app-icon name="whatsapp" /> WhatsApp</a>
+  } @else {
+    <a class="btn-esha btn-outline-rose" [href]="b.instagramUrl" target="_blank" rel="noopener"><app-icon name="instagram" /> Instagram</a>
+  }
+</div>

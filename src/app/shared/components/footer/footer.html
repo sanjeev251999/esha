@@ -1,0 +1,80 @@
+<footer class="site-footer" [class.compact]="mode() === 'landing'">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="container position-relative">
+    @if (mode() === 'full') {
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-4">
+          <a routerLink="/" class="brand" aria-label="Esha Beauty Paradise – home"><app-logo class="on-dark" gid="logo-footer" /></a>
+          <p class="blurb">
+            A beauty salon dedicated to helping you look and feel your best — for your wedding, your celebrations and every day in between.
+          </p>
+          <div class="social">
+            <a [href]="b.instagramUrl" target="_blank" rel="noopener" aria-label="Instagram"><app-icon name="instagram" /></a>
+            @if (waLink) {
+              <a [href]="waLink" target="_blank" rel="noopener" aria-label="WhatsApp"><app-icon name="whatsapp" /></a>
+            }
+            @if (telLink) {
+              <a [href]="telLink" aria-label="Call"><app-icon name="phone" /></a>
+            }
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h2 class="col-title">Explore</h2>
+          <ul class="links">
+            <li><a routerLink="/about">About Us</a></li>
+            <li><a routerLink="/services">Services</a></li>
+            <li><a routerLink="/gallery">Gallery</a></li>
+            <li><a routerLink="/offers">Special Offers</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h2 class="col-title">Services</h2>
+          <ul class="links">
+            @for (s of services; track s.id) {
+              <li>
+                <a routerLink="/services" [fragment]="s.id">{{ s.name }}</a>
+              </li>
+            }
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h2 class="col-title">Visit &amp; Contact</h2>
+          <ul class="contact">
+            @if (address) {
+              <li><app-icon name="pin" /> <span>{{ address }}</span></li>
+            }
+            @if (telLink) {
+              <li>
+                <app-icon name="phone" /> <a [href]="telLink">{{ b.phoneNumber }}</a>
+              </li>
+            }
+            <li>
+              <app-icon name="instagram" /> <a [href]="b.instagramUrl" target="_blank" rel="noopener">{{ b.instagramHandle }}</a>
+            </li>
+            @for (h of hours; track h.days) {
+              <li>
+                <app-icon name="clock" /> <span>{{ h.days }}: {{ h.hours }}</span>
+              </li>
+            }
+          </ul>
+          <a appEnquireLink class="btn-esha btn-rose btn-sm mt-2">Enquire Now</a>
+        </div>
+      </div>
+    }
+
+    <div class="bottom">
+      <p>&copy; {{ year }} {{ b.name }}. All rights reserved.</p>
+      @if (mode() === 'full') {
+        <p class="small-links"><a routerLink="/enquire">Book via WhatsApp</a></p>
+      } @else {
+        <p class="small-links">
+          <a routerLink="/">Visit our website</a> · <a [href]="b.instagramUrl" target="_blank" rel="noopener">Instagram</a>
+        </p>
+      }
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,166 @@
+<div class="form-card">
+  <div class="form-head">
+    <span class="icon-badge" aria-hidden="true"><app-icon name="calendar" size="1.3rem" /></span>
+    <div>
+      <h2 class="h3 mb-1" id="enquiry-title">{{ heading() }}</h2>
+      <p class="mb-0">{{ subheading() }}</p>
+    </div>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate aria-labelledby="enquiry-title">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label" for="enq-name">Your name <span class="required-mark" aria-hidden="true">*</span></label>
+        <input
+          id="enq-name"
+          type="text"
+          class="form-control"
+          formControlName="name"
+          autocomplete="name"
+          maxlength="60"
+          placeholder="e.g. Priya"
+          [class.is-invalid]="invalid('name')"
+          [attr.aria-invalid]="invalid('name')"
+          aria-describedby="enq-name-err"
+          required
+        />
+        <div class="invalid-feedback" id="enq-name-err">
+          @if (form.controls.name.hasError('required')) {
+            Please enter your name.
+          } @else if (form.controls.name.hasError('minlength')) {
+            Name must be at least 2 characters.
+          } @else if (form.controls.name.hasError('pattern')) {
+            Please use letters only.
+          } @else if (form.controls.name.hasError('maxlength')) {
+            Name is too long.
+          }
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="enq-mobile">Mobile number <span class="required-mark" aria-hidden="true">*</span></label>
+        <input
+          id="enq-mobile"
+          type="tel"
+          class="form-control"
+          formControlName="mobile"
+          autocomplete="tel"
+          inputmode="tel"
+          maxlength="16"
+          placeholder="10-digit mobile number"
+          [class.is-invalid]="invalid('mobile')"
+          [attr.aria-invalid]="invalid('mobile')"
+          aria-describedby="enq-mobile-err"
+          required
+        />
+        <div class="invalid-feedback" id="enq-mobile-err">
+          @if (form.controls.mobile.hasError('required')) {
+            Please enter your mobile number.
+          } @else {
+            {{ business.mobilePatternHint }}
+          }
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="enq-service">Service required <span class="required-mark" aria-hidden="true">*</span></label>
+        <select
+          id="enq-service"
+          class="form-select"
+          formControlName="service"
+          [class.is-invalid]="invalid('service')"
+          [attr.aria-invalid]="invalid('service')"
+          aria-describedby="enq-service-err"
+          required
+        >
+          <option value="" disabled>Select a service</option>
+          @for (s of services; track s.id) {
+            <option [value]="s.id">{{ s.name }}</option>
+          }
+          <option [value]="OTHER">Other / Not sure yet</option>
+        </select>
+        <div class="invalid-feedback" id="enq-service-err">Please choose the service you are interested in.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="enq-date">Preferred date <span class="optional">(optional)</span></label>
+        <input
+          id="enq-date"
+          type="date"
+          class="form-control"
+          formControlName="preferredDate"
+          [attr.min]="minDate()"
+          [class.is-invalid]="invalid('preferredDate')"
+          [attr.aria-invalid]="invalid('preferredDate')"
+          aria-describedby="enq-date-err"
+        />
+        <div class="invalid-feedback" id="enq-date-err">Please choose today or a future date.</div>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label" for="enq-message">Message <span class="optional">(optional)</span></label>
+        <textarea
+          id="enq-message"
+          class="form-control"
+          formControlName="message"
+          rows="3"
+          maxlength="500"
+          placeholder="Tell us about the occasion, preferred time or any questions"
+          [class.is-invalid]="invalid('message')"
+          [attr.aria-invalid]="invalid('message')"
+          aria-describedby="enq-message-count"
+        ></textarea>
+        <div class="d-flex justify-content-end">
+          <small class="count" id="enq-message-count">{{ form.controls.message.value.length }}/500</small>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn-esha btn-wa btn-lg w-100">
+          <app-icon name="whatsapp" size="1.25rem" /> Send Enquiry on WhatsApp
+        </button>
+        <p class="privacy">
+          <app-icon name="shield" size="0.95em" /> Your details go straight to our WhatsApp chat — this website does not store them.
+        </p>
+      </div>
+    </div>
+  </form>
+
+  <div class="status" aria-live="polite">
+    @switch (status()) {
+      @case ('opened') {
+        <div class="note ok">
+          <strong>WhatsApp has opened with your enquiry.</strong>
+          <span>Please tap <b>Send</b> in WhatsApp to complete it. We will reply as soon as possible.</span>
+          <span class="links">
+            @if (waUrl(); as url) {
+              <a [href]="url" target="_blank" rel="noopener">WhatsApp didn't open? Tap here</a>
+            }
+            <button type="button" class="linklike" (click)="reset()">Start a new enquiry</button>
+          </span>
+        </div>
+      }
+      @case ('blocked') {
+        <div class="note warn">
+          <strong>Your browser stopped WhatsApp from opening automatically.</strong>
+          <span>Your enquiry is ready — tap the button below to open it in WhatsApp and press Send.</span>
+          @if (waUrl(); as url) {
+            <a class="btn-esha btn-wa mt-2" [href]="url" target="_blank" rel="noopener"><app-icon name="whatsapp" /> Open WhatsApp</a>
+          }
+        </div>
+      }
+      @case ('not-configured') {
+        <div class="note warn">
+          <strong>WhatsApp enquiries are being set up.</strong>
+          <span>Your enquiry has <b>not</b> been sent yet. Please message us on Instagram and we will help you right away.</span>
+          <span class="links">
+            <a [href]="igDm" target="_blank" rel="noopener"><app-icon name="instagram" /> Message {{ business.instagramHandle }}</a>
+            @if (telLink) {
+              <a [href]="telLink"><app-icon name="phone" /> {{ business.phoneNumber }}</a>
+            }
+          </span>
+        </div>
+      }
+    }
+  </div>
+</div>

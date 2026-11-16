@@ -1,0 +1,80 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" routerLink="/" aria-label="Esha Beauty Paradise – home">
+      <app-logo gid="logo-header" />
+    </a>
+
+    @if (mode() === 'full') {
+      <nav class="desktop-nav d-none d-lg-flex" aria-label="Main navigation">
+        @for (item of nav; track item.path) {
+          <a
+            [routerLink]="item.path"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: !!item.exact }"
+            ariaCurrentWhenActive="page"
+            >{{ item.label }}</a
+          >
+        }
+      </nav>
+
+      <div class="actions">
+        <a class="btn-esha btn-rose btn-sm d-none d-sm-inline-flex" appEnquireLink>Enquire Now</a>
+        <button
+          type="button"
+          class="menu-toggle d-lg-none"
+          [attr.aria-expanded]="menuOpen()"
+          aria-controls="mobile-menu"
+          [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'"
+          (click)="toggleMenu()"
+        >
+          <app-icon [name]="menuOpen() ? 'close' : 'menu'" size="1.5rem" />
+        </button>
+      </div>
+    } @else {
+      <div class="actions">
+        @if (telLink) {
+          <a class="icon-btn" [href]="telLink" aria-label="Call us">
+            <app-icon name="phone" />
+          </a>
+        }
+        @if (waLink) {
+          <a class="btn-esha btn-wa btn-sm" [href]="waLink" target="_blank" rel="noopener"> <app-icon name="whatsapp" /> WhatsApp </a>
+        } @else {
+          <button type="button" class="btn-esha btn-rose btn-sm" (click)="scrollToEnquiry()">Enquire Now</button>
+        }
+      </div>
+    }
+  </div>
+</header>
+
+@if (mode() === 'full') {
+  <div
+    id="mobile-menu"
+    class="mobile-menu d-lg-none"
+    [class.open]="menuOpen()"
+    [attr.aria-hidden]="!menuOpen()"
+    [attr.inert]="menuOpen() ? null : ''"
+  >
+    <nav aria-label="Mobile navigation">
+      @for (item of nav; track item.path; let i = $index) {
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: !!item.exact }"
+          ariaCurrentWhenActive="page"
+          [style.--i]="i"
+          >{{ item.label }}</a
+        >
+      }
+    </nav>
+    <div class="mobile-cta">
+      <a class="btn-esha btn-rose w-100" appEnquireLink (click)="menuOpen.set(false)">Enquire Now</a>
+      @if (waLink) {
+        <a class="btn-esha btn-wa w-100" [href]="waLink" target="_blank" rel="noopener"><app-icon name="whatsapp" /> Chat on WhatsApp</a>
+      }
+      <a class="insta" [href]="business.instagramUrl" target="_blank" rel="noopener">
+        <app-icon name="instagram" /> {{ business.instagramHandle }}
+      </a>
+    </div>
+  </div>
+}

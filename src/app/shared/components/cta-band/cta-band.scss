@@ -1,0 +1,81 @@
+@use 'tokens' as *;
+
+.cta {
+  padding-block: clamp(3rem, 7vw, 5rem);
+}
+
+.inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: $radius-lg;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  background:
+    radial-gradient(70% 120% at 100% 0%, rgba(243, 217, 201, 0.35), transparent 60%),
+    linear-gradient(135deg, #a35a66 0%, #8e4a55 50%, #6e3540 100%);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: $shadow-lift;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    right: -90px;
+    bottom: -170px;
+    pointer-events: none;
+  }
+}
+
+.text {
+  max-width: 560px;
+
+  h2 {
+    color: #fff;
+    font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+    margin-bottom: 0.6rem;
+    em {
+      color: #f3d9c9;
+    }
+  }
+  p {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+  }
+}
+
+.eyebrow.light {
+  color: #f3d9c9;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-light-solid {
+  background: #fff;
+  color: $rose-deep;
+  &:hover {
+    color: $rose-ink;
+    background: $champagne-soft;
+  }
+}
+
+@include down($bp-sm) {
+  .buttons {
+    width: 100%;
+    a {
+      flex: 1 1 100%;
+    }
+  }
+}

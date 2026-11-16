@@ -1,0 +1,99 @@
+<div class="info-card">
+  <h2 class="h3">{{ b.name }}</h2>
+  <p class="intro">We would love to hear from you. Reach us on WhatsApp, call, or visit the salon.</p>
+
+  <ul class="details">
+    <li>
+      <span class="ic"><app-icon name="whatsapp" /></span>
+      <div>
+        <span class="label">WhatsApp</span>
+        @if (waLink) {
+          <a [href]="waLink" target="_blank" rel="noopener">{{ waDisplay }}</a>
+        } @else {
+          <span class="pending">To be updated</span>
+        }
+      </div>
+    </li>
+    <li>
+      <span class="ic"><app-icon name="phone" /></span>
+      <div>
+        <span class="label">Call us</span>
+        @if (telLink) {
+          <a [href]="telLink">{{ b.phoneNumber }}</a>
+        } @else {
+          <span class="pending">To be updated</span>
+        }
+      </div>
+    </li>
+    <li>
+      <span class="ic"><app-icon name="pin" /></span>
+      <div>
+        <span class="label">Address</span>
+        @if (address) {
+          <span>{{ address }}</span>
+          @if (b.googleMapsUrl) {
+            <a class="small-link" [href]="b.googleMapsUrl" target="_blank" rel="noopener">Get directions</a>
+          }
+        } @else {
+          <span class="pending">To be updated</span>
+        }
+      </div>
+    </li>
+    <li>
+      <span class="ic"><app-icon name="instagram" /></span>
+      <div>
+        <span class="label">Instagram</span>
+        <a [href]="b.instagramUrl" target="_blank" rel="noopener">{{ b.instagramHandle }}</a>
+      </div>
+    </li>
+    @if (b.email) {
+      <li>
+        <span class="ic"><app-icon name="mail" /></span>
+        <div>
+          <span class="label">Email</span>
+          <a [href]="'mailto:' + b.email">{{ b.email }}</a>
+        </div>
+      </li>
+    }
+    <li>
+      <span class="ic"><app-icon name="clock" /></span>
+      <div>
+        <span class="label">Working hours</span>
+        <dl class="hours">
+          @for (h of b.workingHours; track h.days) {
+            <div>
+              <dt>{{ h.days }}</dt>
+              <dd>
+                @if (h.hours) {
+                  {{ h.hours }}
+                } @else {
+                  <span class="pending">To be updated</span>
+                }
+              </dd>
+            </div>
+          }
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+
+@if (showMap()) {
+  <div class="map">
+    @if (mapUrl) {
+      <iframe
+        [src]="mapUrl"
+        title="Map showing the location of Esha Beauty Paradise"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+    } @else {
+      <div class="map-placeholder">
+        <app-icon name="pin" size="2rem" />
+        <p>Our map location will appear here soon.</p>
+        <a [href]="b.instagramUrl" target="_blank" rel="noopener">Ask us for directions on Instagram</a>
+      </div>
+    }
+  </div>
+}
