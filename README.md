@@ -2,7 +2,8 @@
 
 Promotional website for **Esha Beauty Paradise**, a beauty salon. Built to turn visitors from Instagram and Facebook ads into WhatsApp enquiries.
 
-- **Live site:** https://www.eshabeautyparlour.com *(once the domain is connected — see [Custom domain](#custom-domain))*
+- **Live site (now):** https://esha-ten.vercel.app
+- **Planned domain:** https://www.eshabeautyparlour.com *(not registered yet — see [Custom domain](#custom-domain))*
 - **Instagram:** https://www.instagram.com/esha_beauty_paradise/
 - **Instagram ad landing page:** `/enquire`
 
@@ -97,8 +98,10 @@ The current photos are royalty-free placeholders — see [CREDITS.md](CREDITS.md
 Use the landing page as the ad's website URL, with UTM tags so enquiries show where they came from:
 
 ```
-https://www.eshabeautyparlour.com/enquire?utm_source=instagram&utm_medium=paid&utm_campaign=bridal-nov
+https://esha-ten.vercel.app/enquire?utm_source=instagram&utm_medium=paid&utm_campaign=bridal-nov
 ```
+
+After the custom domain is connected, use `https://www.eshabeautyparlour.com/enquire?...` instead.
 
 - Add `&service=bridal-makeup` to pre-select a service in the form. Ids are listed in `services.content.ts`.
 - The WhatsApp message ends with `(Sent from website – instagram)` when `utm_source` is present.
@@ -170,7 +173,7 @@ Build settings are in `vercel.json`:
 | Install | `npm ci` |
 | Build | `npm run build` |
 | Output directory | `dist/esha/browser` |
-| Routing | prerendered pages served as static HTML; unknown URLs fall back to `index.csr.html` (the in-app "Page not found" page) |
+| Routing | prerendered pages served as static HTML; unknown URLs get `404.html` (a copy of the app shell, made by `postbuild`) with a real 404 status, showing the in-app "Page not found" page |
 
 Manual deploy from a computer:
 
@@ -193,6 +196,9 @@ Target: **www.eshabeautyparlour.com** as the primary domain, with `eshabeautypar
 
    *(Vercel may show project-specific values — always use what the Domains screen shows.)*
 4. Vercel issues the HTTPS/SSL certificate automatically once DNS resolves. This usually takes minutes, but can take up to 48 hours.
+5. Switch the site's own links to the new domain, then commit and push:
+   - `src/environments/environment.ts` → `siteUrl: 'https://www.eshabeautyparlour.com'` (canonical URLs, link previews, sitemap, robots)
+   - `src/index.html` → the two URLs in the `application/ld+json` block
 
 ---
 
