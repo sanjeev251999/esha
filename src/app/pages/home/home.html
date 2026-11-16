@@ -22,29 +22,45 @@
   <div class="container hero-inner">
     <div class="row align-items-center g-4 g-lg-5">
       <div class="col-lg-7 hero-copy">
-        <p class="eyebrow rise">Beauty · Skin · Hair · Body</p>
-        <h1 id="hero-title" class="rise" style="--rise-delay: 0.08s">
-          <span class="brand-line">{{ b.name }}</span>
-          Reveal your most <em>radiant</em> self
+        <!-- Classic signboard-style name block -->
+        <svg class="crown rise" viewBox="0 0 48 18" aria-hidden="true" focusable="false">
+          <path d="M14 16 12.5 6.5 18.5 11 24 4 29.5 11 35.5 6.5 34 16Z" fill="currentColor" />
+          <circle cx="12.5" cy="6" r="1.4" fill="currentColor" />
+          <circle cx="24" cy="3.4" r="1.4" fill="currentColor" />
+          <circle cx="35.5" cy="6" r="1.4" fill="currentColor" />
+        </svg>
+        <h1 id="hero-title" class="rise" style="--rise-delay: 0.06s">
+          <span class="name">Esha</span>
+          <span class="sub">Aesthetic Centre</span>
         </h1>
-        <p class="lead-text rise" style="--rise-delay: 0.16s">
-          From laser and skin treatments to microblading, mehandi and bridal makeup — personalised beauty and aesthetic care in Nagercoil, so you
-          can look and feel your absolute best.
-        </p>
-        <div class="hero-ctas rise" style="--rise-delay: 0.24s">
-          <a class="btn-esha btn-maroon btn-lg" appEnquireLink>
-            Enquire Now <app-icon name="arrow" />
-          </a>
-          @if (waLink) {
-            <a class="btn-esha btn-wa btn-lg" [href]="waLink" target="_blank" rel="noopener"><app-icon name="whatsapp" /> WhatsApp</a>
-          }
-          <a class="btn-esha btn-outline-maroon btn-lg" routerLink="/services">Explore Services</a>
+        <div class="lotus-rule rise" style="--rise-delay: 0.1s" aria-hidden="true">
+          <span></span>
+          <svg viewBox="0 0 120 70" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round">
+              <path d="M60 6C72 22 72 44 60 62 48 44 48 22 60 6Z" />
+              <path d="M60 62C46 52 34 36 32 18 46 24 56 38 60 62Z" />
+              <path d="M60 62C74 52 86 36 88 18 74 24 64 38 60 62Z" />
+            </g>
+          </svg>
+          <span></span>
         </div>
+        <p class="pillars rise" style="--rise-delay: 0.14s">Beauty <i>|</i> Skin <i>|</i> Hair <i>|</i> Body</p>
+        <p class="tagline rise" style="--rise-delay: 0.18s">Reveal your most <em>radiant</em> self</p>
+        <p class="lead-text rise" style="--rise-delay: 0.22s">
+          Laser &amp; skin treatments, microblading, mehandi, tattoo and bridal makeup — personalised care in Nagercoil.
+        </p>
+        <div class="hero-ctas rise" style="--rise-delay: 0.26s">
+          <a class="btn-esha btn-maroon" appEnquireLink>Enquire Now</a>
+          @if (waLink) {
+            <a class="btn-esha btn-wa" [href]="waLink" target="_blank" rel="noopener"><app-icon name="whatsapp" /> WhatsApp</a>
+          }
+        </div>
+        <a class="explore rise" style="--rise-delay: 0.3s" routerLink="/services">Explore our services <app-icon name="arrow" size="0.95em" /></a>
       </div>
 
       <div class="col-lg-5">
-        <div class="hero-visual rise" style="--rise-delay: 0.2s">
-          <div class="arch-frame portrait">
+        <figure class="hero-visual rise" style="--rise-delay: 0.2s">
+          <div class="frame">
             <img
               src="assets/images/hero/hero-portrait.webp"
               alt="Bride in a red silk saree with bridal bangles and mehandi, hands folded in namaste"
@@ -54,10 +70,7 @@
               decoding="async"
             />
           </div>
-          <div class="arch-outline" aria-hidden="true"></div>
-          <div class="chip chip-1"><app-icon name="gem" /> Bridal Makeup</div>
-          <div class="chip chip-2"><app-icon name="sparkles" /> Hair &amp; Skin Care</div>
-        </div>
+        </figure>
       </div>
     </div>
   </div>
@@ -69,11 +82,9 @@
     <ul class="hl-grid">
       @for (h of highlights; track h.title; let i = $index) {
         <li [appReveal]="i * 80 + 'ms'">
-          <span class="hl-icon"><app-icon [name]="h.icon" size="1.35rem" /></span>
-          <div>
-            <strong>{{ h.title }}</strong>
-            <span>{{ h.text }}</span>
-          </div>
+          <span class="hl-icon"><app-icon [name]="h.icon" size="1.25rem" /></span>
+          <strong>{{ h.title }}</strong>
+          <span class="hl-text">{{ h.text }}</span>
         </li>
       }
     </ul>
