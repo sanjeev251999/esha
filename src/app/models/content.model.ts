@@ -42,7 +42,7 @@ export interface Offer {
   active: boolean;
 }
 
-export type GalleryCategory = 'Bridal' | 'Makeup' | 'Skin' | 'Hair' | 'Salon';
+export type GalleryCategory = 'Bridal' | 'Makeup' | 'Mehandi' | 'Skin' | 'Hair' | 'Nails' | 'Tattoo';
 
 export interface GalleryImage {
   src: string;

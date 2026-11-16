@@ -18,7 +18,7 @@ export const SERVICES: SalonService[] = [
       'Laser treatments can help with concerns such as unwanted hair and uneven-looking skin. Every treatment begins with a consultation so we can understand your skin and recommend whether laser is right for you, how many sessions may be needed and how to care for your skin afterwards.',
     highlights: ['Personal skin consultation', 'Laser hair reduction', 'Skin-focused laser care', 'Aftercare guidance'],
     image: 'assets/images/services/laser-treatment.webp',
-    imageAlt: 'Woman relaxing during a facial skin treatment',
+    imageAlt: 'Client lying back during a professional face and skin treatment',
     featured: true,
   },
   {
@@ -29,7 +29,7 @@ export const SERVICES: SalonService[] = [
       'Tell us about the areas you would like to work on and we will suggest a contouring and slimming plan that suits you, along with simple lifestyle tips to support your results.',
     highlights: ['Goal-based consultation', 'Non-surgical sessions', 'Targeted body areas', 'Progress check-ins'],
     image: 'assets/images/services/body-contouring.webp',
-    imageAlt: 'Woman relaxing during a body treatment session',
+    imageAlt: 'Slim, toned waistline – body contouring and slimming',
     featured: false,
   },
   {
@@ -51,7 +51,7 @@ export const SERVICES: SalonService[] = [
       'Whether you want softer, shinier hair or help with frizz, dryness or damage, we recommend treatments that suit your hair type — from relaxing hair spa to smoothening and styling.',
     highlights: ['Hair spa', 'Smoothening & keratin care', 'Frizz & dryness care', 'Haircuts & styling'],
     image: 'assets/images/services/hair-treatments.webp',
-    imageAlt: 'Hair set in rollers during a salon hair treatment',
+    imageAlt: 'Hair colour treatment with foils in the salon',
     featured: true,
   },
   {
@@ -73,7 +73,7 @@ export const SERVICES: SalonService[] = [
       'From detailed bridal mehandi to simple and elegant designs for festivals, engagements and parties — share your preferred style and we will create a design you love.',
     highlights: ['Bridal mehandi', 'Arabic & traditional designs', 'Festive & party mehandi', 'Designs for guests'],
     image: 'assets/images/services/mehandi.webp',
-    imageAlt: 'Hands decorated with intricate henna mehandi designs',
+    imageAlt: 'Intricate mehandi design being applied with a henna cone',
     featured: true,
   },
   {
@@ -95,7 +95,7 @@ export const SERVICES: SalonService[] = [
       'Microblading creates fine, hair-like strokes for fuller, defined brows that save you time every day. We map the brow shape to your face and choose a shade that matches your natural colouring.',
     highlights: ['Brow shape mapping', 'Natural hair-like strokes', 'Shade matching', 'Touch-up sessions'],
     image: 'assets/images/services/microblading.webp',
-    imageAlt: 'Close-up of a woman’s eyes and well-defined eyebrows',
+    imageAlt: 'Close-up of full, well-defined eyebrows',
     featured: true,
   },
   {
@@ -106,7 +106,7 @@ export const SERVICES: SalonService[] = [
       'Bring your idea or choose from our designs. We help you finalise the size, placement and style, and guide you on aftercare so your tattoo heals beautifully.',
     highlights: ['Custom designs', 'Fine-line & minimal tattoos', 'Name & symbol tattoos', 'Aftercare guidance'],
     image: 'assets/images/services/tattoo.webp',
-    imageAlt: 'Fine-line world map tattoo on a forearm',
+    imageAlt: 'Tattoo artist tattooing fine script lettering on an arm',
     featured: false,
   },
   {
@@ -117,7 +117,7 @@ export const SERVICES: SalonService[] = [
       'Your look should feel like you — only more radiant. From complete bridal makeup to engagement, reception and party looks, we design your makeup around your skin, outfit, jewellery and the occasion, with matching hairstyling and saree draping on request.',
     highlights: ['Bridal & reception makeup', 'Engagement & party makeup', 'HD makeup', 'Hairstyling & draping'],
     image: 'assets/images/services/all-makeups.webp',
-    imageAlt: 'Woman with elegant party makeup and styled hair',
+    imageAlt: 'Makeup artist applying lipstick to a client with glam eye makeup',
     featured: true,
   },
 ];

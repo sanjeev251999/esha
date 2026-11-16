@@ -12,31 +12,31 @@ All images were resized, cropped and converted to WebP for fast loading.
 | File (in `src/assets/images/`) | Original title | Source | License | Link |
 | --- | --- | --- | --- | --- |
 | hero/hero-bg.webp | Makeup Brush | StockSnap | CC0 | https://stocksnap.io/photo/makeup-brush-EXKVSL1OHJ |
-| hero/hero-portrait.webp | People Woman | StockSnap | CC0 | https://stocksnap.io/photo/people-woman-01JKHO56CN |
-| about/about-main.webp | Makeup Brush | StockSnap | CC0 | https://stocksnap.io/photo/makeup-brush-EE2H5SKEPA |
-| about/about-secondary.webp | Wellness Cosmetics | StockSnap | CC0 | https://stocksnap.io/photo/wellness-cosmetics-QGRV9ZQ8U6 |
-| services/laser-treatment.webp | Woman Massage | StockSnap | CC0 | https://stocksnap.io/photo/woman-massage-I6JSEMNOBS |
-| services/body-contouring.webp | Woman Massage | StockSnap | CC0 | https://stocksnap.io/photo/woman-massage-XVEZDYZASS |
-| services/skin-treatments.webp | Woman Skin | StockSnap | CC0 | https://stocksnap.io/photo/woman-skin-HIZNJOUVSY |
-| services/hair-treatments.webp | Hair Curls | StockSnap | CC0 | https://stocksnap.io/photo/hair-curls-R6CKAMVOMZ |
-| services/nail-art.webp | People Hands | StockSnap | CC0 | https://stocksnap.io/photo/people-hands-XX356Q6EI4 |
-| services/mehandi.webp | Henna Tattoos | StockSnap | CC0 | https://stocksnap.io/photo/henna-tattoos-617D5C3D03 |
+| hero/hero-portrait.webp | Free Indian wedding photo | rawpixel | CC0 | https://www.rawpixel.com/image/5919721/free-indian-wedding-photo-public-domain-cc0 |
+| about/about-main.webp | Makeup artist brushes | rawpixel | CC0 | https://www.rawpixel.com/image/6022176/photo-image-public-domain-person-brushes |
+| about/about-secondary.webp | Person showing hand tattoos | rawpixel | CC0 | https://www.rawpixel.com/image/3285558/free-photo-image-arm-cc0-creative-commons |
+| services/all-makeups.webp | Makeup Artist | StockSnap | CC0 | https://stocksnap.io/photo/makeup-artist-0VSOU0YJF6 |
+| services/body-contouring.webp | Fashion Waist | StockSnap | CC0 | https://stocksnap.io/photo/fashion-waist-VVCEOWJ6GM |
 | services/botox-fillers.webp | Beauty Skincare | StockSnap | CC0 | https://stocksnap.io/photo/beauty-skincare-LRSAT4NCLS |
-| services/microblading.webp | People Girl | StockSnap | CC0 | https://stocksnap.io/photo/people-girl-EPNK1H7KBP |
-| services/tattoo.webp | Map Tattoo | StockSnap | CC0 | https://stocksnap.io/photo/map-tattoo-HBTMBXQX80 |
-| services/all-makeups.webp | Woman Model | StockSnap | CC0 | https://stocksnap.io/photo/woman-model-XRLVYYB3OF |
+| services/hair-treatments.webp | Untitled | rawpixel | CC0 | https://www.rawpixel.com/image/5944492/free-public-domain-cc0-photo |
+| services/laser-treatment.webp | Woman Massage | StockSnap | CC0 | https://stocksnap.io/photo/woman-massage-U2PRCV7BEQ |
+| services/mehandi.webp | Untitled | rawpixel | CC0 | https://www.rawpixel.com/image/5922607/free-public-domain-cc0-photo |
+| services/microblading.webp | Eyes Eyelashes | StockSnap | CC0 | https://stocksnap.io/photo/eyes-eyelashes-2B47ZJBEU3 |
+| services/nail-art.webp | People Hands | StockSnap | CC0 | https://stocksnap.io/photo/people-hands-XX356Q6EI4 |
+| services/skin-treatments.webp | Woman Skin | StockSnap | CC0 | https://stocksnap.io/photo/woman-skin-HIZNJOUVSY |
+| services/tattoo.webp | Free tattoo artist working image | rawpixel | CC0 | https://www.rawpixel.com/image/5908894/image-public-domain-hands-painting |
 | offers/offers-banner.webp | Spa Concept | StockSnap | CC0 | https://stocksnap.io/photo/spa-concept-PN5KM1RHOG |
-| gallery/gallery-01.webp | Indian bride traditional dress | rawpixel | CC0 | https://www.rawpixel.com/image/6029712/photo-image-public-domain-wedding-person |
-| gallery/gallery-02.webp | Makeup Brush | StockSnap | CC0 | https://stocksnap.io/photo/makeup-brush-EXKVSL1OHJ |
-| gallery/gallery-03.webp | People Woman | StockSnap | CC0 | https://stocksnap.io/photo/people-woman-01JKHO56CN |
-| gallery/gallery-04.webp | Beauty Makeup | StockSnap | CC0 | https://stocksnap.io/photo/beauty-makeup-34MSYVUYS0 |
-| gallery/gallery-05.webp | Makeup Brush | StockSnap | CC0 | https://stocksnap.io/photo/makeup-brush-PZ0Z7K0JRR |
-| gallery/gallery-06.webp | Woman Skin | StockSnap | CC0 | https://stocksnap.io/photo/woman-skin-JF6DZWDDO3 |
-| gallery/gallery-07.webp | Makeup Products | StockSnap | CC0 | https://stocksnap.io/photo/makeup-products-I8SLDUOMYC |
-| gallery/gallery-08.webp | Spa Concept | StockSnap | CC0 | https://stocksnap.io/photo/spa-concept-ZCLKDUY2CZ |
-| gallery/gallery-09.webp | Woman Lipstick | StockSnap | CC0 | https://stocksnap.io/photo/woman-lipstick-UUW7JAWUU1 |
-| gallery/gallery-10.webp | Makeup Brush | StockSnap | CC0 | https://stocksnap.io/photo/makeup-brush-IJSBS0EFPO |
-| gallery/gallery-11.webp | People Woman | StockSnap | CC0 | https://stocksnap.io/photo/people-woman-Y72F5HF9PT |
-| gallery/gallery-12.webp | People Hands | StockSnap | CC0 | https://stocksnap.io/photo/people-hands-XX356Q6EI4 |
+| gallery/gallery-01.webp | Free Indian wedding photo | rawpixel | CC0 | https://www.rawpixel.com/image/5919721/free-indian-wedding-photo-public-domain-cc0 |
+| gallery/gallery-02.webp | Makeup Artist | StockSnap | CC0 | https://stocksnap.io/photo/makeup-artist-0VSOU0YJF6 |
+| gallery/gallery-03.webp | Untitled | rawpixel | CC0 | https://www.rawpixel.com/image/5922607/free-public-domain-cc0-photo |
+| gallery/gallery-04.webp | Traditional Indian wedding | rawpixel | CC0 | https://www.rawpixel.com/image/6029692/photo-image-public-domain-wedding-person |
+| gallery/gallery-05.webp | Free tattoo artist working image | rawpixel | CC0 | https://www.rawpixel.com/image/5908894/image-public-domain-hands-painting |
+| gallery/gallery-06.webp | Woman Massage | StockSnap | CC0 | https://stocksnap.io/photo/woman-massage-U2PRCV7BEQ |
+| gallery/gallery-07.webp | Free Indian wedding photo | rawpixel | CC0 | https://www.rawpixel.com/image/5924300/free-indian-wedding-photo-public-domain-cc0 |
+| gallery/gallery-08.webp | People Hands | StockSnap | CC0 | https://stocksnap.io/photo/people-hands-5M4DNCN8ZW |
+| gallery/gallery-09.webp | Untitled | rawpixel | CC0 | https://www.rawpixel.com/image/5944492/free-public-domain-cc0-photo |
+| gallery/gallery-10.webp | Makeup artist brushes | rawpixel | CC0 | https://www.rawpixel.com/image/6035373/photo-image-public-domain-person-brushes |
+| gallery/gallery-11.webp | Free Indian wedding photo | rawpixel | CC0 | https://www.rawpixel.com/image/5922055/free-indian-wedding-photo-public-domain-cc0 |
+| gallery/gallery-12.webp | Tattoo artist | rawpixel | CC0 | https://www.rawpixel.com/image/3370012/free-photo-image-tattooer-tattoo-artist-arm |
 
 The social-share image (`public/og-image.jpg`) is composed from `hero-portrait.webp`. Icons are from [Bootstrap Icons](https://icons.getbootstrap.com) (MIT License).
