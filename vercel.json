@@ -11,14 +11,14 @@
     { "source": "/offer", "destination": "/enquire", "permanent": false },
     { "source": "/instagram", "destination": "/enquire", "permanent": false }
   ],
-  "rewrites": [{ "source": "/((?!.*\.).*)", "destination": "/index.csr.html" }],
+  "rewrites": [{ "source": "/((?!.*\\.).*)", "destination": "/index.csr.html" }],
   "headers": [
     {
       "source": "/assets/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
     },
     {
-      "source": "/(.*)\.(js|css)",
+      "source": "/(main|chunk|styles|polyfills)-(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     },
     {
