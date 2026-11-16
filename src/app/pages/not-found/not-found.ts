@@ -13,8 +13,8 @@ import { Icon } from '../../shared/components/icon/icon';
         <h1 class="display-title">This page has <em>wandered off</em></h1>
         <p class="lead-text">The page you are looking for doesn't exist. Let's get you back to something beautiful.</p>
         <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
-          <a class="btn-esha btn-rose" routerLink="/">Go to Home <app-icon name="arrow" /></a>
-          <a class="btn-esha btn-outline-rose" routerLink="/services">View Services</a>
+          <a class="btn-esha btn-maroon" routerLink="/">Go to Home <app-icon name="arrow" /></a>
+          <a class="btn-esha btn-outline-maroon" routerLink="/services">View Services</a>
         </div>
       </div>
     </section>

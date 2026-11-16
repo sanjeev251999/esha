@@ -20,7 +20,12 @@ export class ContactInfo {
 
   protected readonly b = BUSINESS;
   protected readonly waLink = inject(WhatsappService).quickLink();
-  protected readonly waDisplay = BUSINESS.whatsappNumber ? '+' + BUSINESS.whatsappNumber.replace(/\D/g, '') : '';
+  /** Show the nicely formatted phone number when WhatsApp uses the same number. */
+  protected readonly waDisplay = !BUSINESS.whatsappNumber
+    ? ''
+    : BUSINESS.phoneNumber.replace(/\D/g, '') === BUSINESS.whatsappNumber.replace(/\D/g, '')
+      ? BUSINESS.phoneNumber
+      : '+' + BUSINESS.whatsappNumber.replace(/\D/g, '');
   protected readonly telLink = BUSINESS.phoneNumber ? `tel:${BUSINESS.phoneNumber.replace(/[^\d+]/g, '')}` : null;
   protected readonly address = [BUSINESS.address.line1, BUSINESS.address.line2, BUSINESS.address.city, BUSINESS.address.state, BUSINESS.address.pincode]
     .filter(Boolean)

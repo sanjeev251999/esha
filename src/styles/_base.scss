@@ -4,8 +4,8 @@
 @use 'tokens' as *;
 
 :root {
-  --esha-rose: #{$rose};
-  --esha-rose-deep: #{$rose-deep};
+  --esha-gold: #{$gold};
+  --esha-maroon: #{$maroon};
   --esha-ink: #{$ink};
   --esha-header-h: #{$header-h-mobile};
   @include up($bp-lg) {
@@ -51,12 +51,12 @@ img {
 }
 
 ::selection {
-  background: $blush;
-  color: $rose-ink;
+  background: $cream;
+  color: $maroon-ink;
 }
 
 :focus-visible {
-  outline: 2px solid $rose;
+  outline: 2px solid $gold;
   outline-offset: 3px;
 }
 
@@ -76,7 +76,7 @@ h4 {
   top: -100px;
   z-index: 2000;
   padding: 0.6rem 1rem;
-  background: $rose-deep;
+  background: $maroon;
   color: #fff;
   border-radius: $radius-sm;
   &:focus {
@@ -95,8 +95,8 @@ h4 {
   padding-block: clamp(3rem, 6vw, 4.5rem);
 }
 
-.bg-blush {
-  background: $blush-gradient;
+.bg-cream {
+  background: $cream-gradient;
 }
 
 .bg-champagne {
@@ -112,7 +112,7 @@ h4 {
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: $rose-deep;
+  color: $maroon;
   margin-bottom: 0.9rem;
 
   &::before {
@@ -131,7 +131,7 @@ h4 {
   em {
     font-style: italic;
     font-weight: 500;
-    color: $rose-deep;
+    color: $maroon;
   }
 }
 
@@ -142,8 +142,8 @@ h4 {
   max-width: 62ch;
 }
 
-.text-rose {
-  color: $rose-deep !important;
+.text-maroon {
+  color: $maroon !important;
 }
 
 .ornament {
@@ -151,7 +151,7 @@ h4 {
   align-items: center;
   justify-content: center;
   gap: 0.9rem;
-  color: $rose;
+  color: $gold;
   margin: 0.4rem 0 1.4rem;
 
   &::before,
@@ -159,7 +159,7 @@ h4 {
     content: '';
     width: 54px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, $rose);
+    background: linear-gradient(90deg, transparent, $gold);
   }
   &::after {
     transform: scaleX(-1);
@@ -234,40 +234,40 @@ h4 {
   }
 }
 
-// Primary: rose-gold metal with a soft sheen sweep on hover
-.btn-rose {
+// Primary: deep maroon with a soft sheen sweep on hover
+.btn-maroon {
   color: #fff;
-  background: linear-gradient(135deg, #a35a66 0%, #8e4a55 55%, #7a3c48 100%);
-  box-shadow: 0 10px 24px -10px rgba(142, 74, 85, 0.65);
+  background: linear-gradient(135deg, #962a3a 0%, #7d1f2c 55%, #5a1520 100%);
+  box-shadow: 0 10px 24px -10px rgba(125, 31, 44, 0.65);
 
   &::after {
     content: '';
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(110deg, transparent 30%, rgba(255, 236, 226, 0.45) 50%, transparent 70%);
+    background: linear-gradient(110deg, transparent 30%, rgba(255, 240, 205, 0.45) 50%, transparent 70%);
     transform: translateX(-120%);
     transition: transform 0.8s $ease;
   }
   &:hover {
     color: #fff;
-    box-shadow: 0 16px 30px -12px rgba(142, 74, 85, 0.75);
+    box-shadow: 0 16px 30px -12px rgba(125, 31, 44, 0.75);
     &::after {
       transform: translateX(120%);
     }
   }
 }
 
-.btn-outline-rose {
-  color: $rose-deep;
+.btn-outline-maroon {
+  color: $maroon;
   background: rgba(255, 255, 255, 0.65);
-  border-color: rgba(183, 110, 121, 0.55);
+  border-color: rgba(176, 138, 62, 0.55);
   backdrop-filter: blur(6px);
 
   &:hover {
     color: #fff;
-    background: $rose-deep;
-    border-color: $rose-deep;
+    background: $maroon;
+    border-color: $maroon;
   }
 }
 
@@ -282,11 +282,11 @@ h4 {
   }
 }
 
-.btn-link-rose {
+.btn-link-maroon {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  color: $rose-deep;
+  color: $maroon;
   font-weight: 500;
   text-decoration: none;
   letter-spacing: 0.03em;
@@ -294,7 +294,7 @@ h4 {
     transition: transform 0.3s $ease;
   }
   &:hover {
-    color: $rose-ink;
+    color: $maroon-ink;
     svg {
       transform: translateX(4px);
     }
@@ -321,8 +321,8 @@ h4 {
   padding-top: calc(var(--esha-header-h) + clamp(3rem, 7vw, 5rem));
   padding-bottom: clamp(3rem, 6vw, 4.5rem);
   background:
-    radial-gradient(60% 80% at 85% 10%, rgba(239, 220, 192, 0.7) 0%, transparent 60%),
-    radial-gradient(50% 70% at 5% 90%, rgba(246, 223, 219, 0.9) 0%, transparent 60%),
+    radial-gradient(60% 80% at 85% 10%, rgba(234, 215, 176, 0.7) 0%, transparent 60%),
+    radial-gradient(50% 70% at 5% 90%, rgba(243, 230, 207, 0.9) 0%, transparent 60%),
     $ivory;
   text-align: center;
   overflow: hidden;
@@ -342,7 +342,7 @@ h4 {
   list-style: none;
   padding: 0;
   a {
-    color: $rose-deep;
+    color: $maroon;
     text-decoration: none;
   }
   li + li::before {
@@ -397,7 +397,7 @@ h4 {
 }
 
 .required-mark {
-  color: $rose-deep;
+  color: $maroon;
 }
 
 .visually-hidden-focusable:not(:focus):not(:focus-within) {

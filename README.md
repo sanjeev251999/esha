@@ -1,13 +1,14 @@
-# Esha Beauty Paradise — Website
+# Esha Aesthetic Centre — Website
 
-Promotional website for **Esha Beauty Paradise**, a beauty salon. Built to turn visitors from Instagram and Facebook ads into WhatsApp enquiries.
+Promotional website for **Esha Aesthetic Centre** (Beauty | Skin | Hair | Body), Nagercoil — also known as Esha Beauty Paradise & Tattoo Academy. Built to turn visitors from Instagram and Facebook ads into WhatsApp enquiries.
 
 - **Live site (now):** https://esha-ten.vercel.app
 - **Planned domain:** https://www.eshabeautyparlour.com *(not registered yet — see [Custom domain](#custom-domain))*
-- **Instagram:** https://www.instagram.com/esha_beauty_paradise/
+- **Instagram:** https://www.instagram.com/esha_aesthetic_centre/
+- **Phone / WhatsApp:** +91 82484 74624
 - **Instagram ad landing page:** `/enquire`
 
-No online payments, cart, logins or backend. Enquiries go straight to the salon's WhatsApp.
+No online payments, cart, logins or backend. Enquiries go straight to the centre's WhatsApp.
 
 ---
 
@@ -151,14 +152,14 @@ vercel.json                           ← build settings, redirects, SPA fallbac
 
 | Token | Hex | Use |
 | --- | --- | --- |
-| Rose gold | `#B76E79` | accents, icons |
-| Deep rose | `#8E4A55` | buttons, links |
-| Blush | `#F6DFDB` | section backgrounds |
-| Champagne | `#EFDCC0` | warm highlights |
-| Ivory | `#FFFAF7` | page background |
-| Ink | `#3A2A2E` | text |
+| Maroon | `#7D1F2C` | buttons, links, headings accents |
+| Gold | `#B08A3E` | icons, lines, ornaments |
+| Light gold | `#E8CF95` | accents on dark backgrounds |
+| Cream | `#F3E6CF` | section backgrounds |
+| Ivory | `#FFFCF5` | page background |
+| Ink | `#2F1D1F` | text |
 
-Fonts: **Cormorant Garamond** (headings) and **Jost** (body), both from Google Fonts.
+Fonts: **Cinzel** (logo wordmark), **Cormorant Garamond** (headings) and **Jost** (body), all from Google Fonts. Palette and logo follow the salon signboard.
 
 ---
 
@@ -204,4 +205,4 @@ Target: **www.eshabeautyparlour.com** as the primary domain, with `eshabeautypar
 
 ## License
 
-© Esha Beauty Paradise. All rights reserved. Third-party assets: see [CREDITS.md](CREDITS.md).
+© Esha Aesthetic Centre. All rights reserved. Third-party assets: see [CREDITS.md](CREDITS.md).

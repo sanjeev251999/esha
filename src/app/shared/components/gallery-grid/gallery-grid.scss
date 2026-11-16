@@ -23,12 +23,12 @@
     transition: all 0.25s $ease;
 
     &:hover {
-      border-color: $rose;
-      color: $rose-deep;
+      border-color: $gold;
+      color: $maroon;
     }
     &.active {
-      background: $rose-deep;
-      border-color: $rose-deep;
+      background: $maroon;
+      border-color: $maroon;
       color: #fff;
     }
   }
@@ -68,7 +68,7 @@
   border-radius: $radius;
   overflow: hidden;
   cursor: zoom-in;
-  background: $blush-soft;
+  background: $cream-soft;
 
   img {
     display: block;
@@ -85,7 +85,7 @@
     justify-content: space-between;
     padding: 0.9rem 1rem;
     color: #fff;
-    background: linear-gradient(to top, rgba(110, 53, 64, 0.65), transparent 55%);
+    background: linear-gradient(to top, rgba(90, 21, 32, 0.65), transparent 55%);
     opacity: 0;
     transition: opacity 0.4s $ease;
   }
@@ -127,7 +127,7 @@
   }
 
   &::backdrop {
-    background: rgba(30, 18, 22, 0.92);
+    background: rgba(30, 10, 14, 0.92);
     backdrop-filter: blur(4px);
   }
 
@@ -155,7 +155,7 @@
 
   .counter {
     display: block;
-    color: #e9c6b5;
+    color: #e8cf95;
     font-size: 0.8rem;
     letter-spacing: 0.15em;
     margin-top: 0.25rem;

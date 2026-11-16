@@ -13,9 +13,9 @@ export const routes: Routes = [
     pathMatch: 'full',
     loadComponent: () => import('./pages/home/home').then((m) => m.Home),
     data: seo({
-      title: 'Bridal Makeup, Hair & Skin Care Salon',
+      title: 'Beauty, Skin, Hair & Body Clinic in Nagercoil',
       description:
-        'Esha Beauty Paradise – beauty salon for bridal makeup, party makeup, hair styling, hair spa, facials and skin care. Enquire on WhatsApp in under a minute.',
+        'Esha Aesthetic Centre, Nagercoil – laser treatment, skin & hair treatments, body contouring, Botox & fillers, microblading, mehandi, tattoo, nail art and bridal makeup. Enquire on WhatsApp.',
     }),
   },
   {
@@ -23,16 +23,16 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/about/about').then((m) => m.About),
     data: seo({
       title: 'About Us',
-      description: 'Get to know Esha Beauty Paradise – our mission, our commitment to customer satisfaction and the beauty services we offer.',
+      description: 'Get to know Esha Aesthetic Centre, Nagercoil – our mission, our commitment to customer satisfaction and the beauty, skin, hair and body services we offer.',
     }),
   },
   {
     path: 'services',
     loadComponent: () => import('./pages/services/services').then((m) => m.Services),
     data: seo({
-      title: 'Services – Bridal Makeup, Facials, Hair Spa & More',
+      title: 'Services – Laser, Skin, Hair, Makeup, Microblading & More',
       description:
-        'Bridal makeup, party makeup, facials, hair styling, hair spa, hair treatments, skin care and beauty treatments at Esha Beauty Paradise. Enquire on WhatsApp.',
+        'Laser treatment, body contouring & slimming, skin and hair treatments, nail art, mehandi, Botox & fillers, microblading, tattoo and all makeups at Esha Aesthetic Centre, Nagercoil.',
     }),
   },
   {
@@ -40,7 +40,7 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/gallery/gallery').then((m) => m.Gallery),
     data: seo({
       title: 'Gallery',
-      description: 'Browse bridal looks, makeup, hair and skin care moments from Esha Beauty Paradise.',
+      description: 'Browse makeup, mehandi, skin, hair and nail work from Esha Aesthetic Centre, Nagercoil.',
     }),
   },
   {
@@ -48,7 +48,7 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/offers/offers').then((m) => m.Offers),
     data: seo({
       title: 'Special Offers & Beauty Packages',
-      description: 'Seasonal offers, bridal packages and self-care packages at Esha Beauty Paradise. Message us on WhatsApp for current offers.',
+      description: 'Seasonal offers, bridal packages and treatment packages at Esha Aesthetic Centre, Nagercoil. Message us on WhatsApp for current offers.',
     }),
   },
   {
@@ -56,7 +56,7 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
     data: seo({
       title: 'Contact & Enquiry',
-      description: 'Send an enquiry to Esha Beauty Paradise on WhatsApp, find our contact details, location and working hours.',
+      description: 'Contact Esha Aesthetic Centre, PWD Office Road, Kottar, Nagercoil. Call or WhatsApp +91 82484 74624. Open 9 AM – 9 PM.',
     }),
   },
   {
@@ -68,7 +68,7 @@ export const routes: Routes = [
       ...seo({
         title: 'Book Your Beauty Appointment',
         description:
-          'Bridal & party makeup, hair styling, hair spa, facials and skin care at Esha Beauty Paradise. Tap to enquire on WhatsApp.',
+          'Laser, skin, hair & body treatments, microblading, mehandi, tattoo and bridal makeup at Esha Aesthetic Centre, Nagercoil. Tap to enquire on WhatsApp.',
       }),
     },
   },

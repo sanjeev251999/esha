@@ -31,7 +31,7 @@ export class WhatsappService {
 
   /** Short greeting used by the floating button and generic WhatsApp CTAs. */
   quickMessage(serviceName?: string): string {
-    const about = serviceName ? ` about *${serviceName}*` : ' about your salon services';
+    const about = serviceName ? ` about *${serviceName}*` : ' about your services';
     return `Hello ${BUSINESS.name}! I would like to enquire${about}. Please share the details.`;
   }
 

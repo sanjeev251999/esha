@@ -21,13 +21,13 @@ import { SalonService } from '../../../models/content.model';
         <p>{{ service().summary }}</p>
         <div class="actions">
           <a
-            class="btn-esha btn-rose btn-sm"
+            class="btn-esha btn-maroon btn-sm"
             [appEnquireLink]="service().id"
             [attr.aria-label]="'Enquire now about ' + service().name"
             >Enquire Now</a
           >
           @if (showDetails()) {
-            <a class="btn-link-rose" routerLink="/services" [fragment]="service().id" [attr.aria-label]="'More about ' + service().name"
+            <a class="btn-link-maroon" routerLink="/services" [fragment]="service().id" [attr.aria-label]="'More about ' + service().name"
               >Details <app-icon name="arrow" size="0.95em"
             /></a>
           }

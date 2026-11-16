@@ -16,9 +16,9 @@ import { WhatsappService } from '../../core/services/whatsapp.service';
     <app-page-hero
       crumb="Services"
       eyebrow="Our Services"
-      title="Beauty services for"
-      accent="every you"
-      intro="Makeup, hair and skin care tailored to you. Choose a service and enquire on WhatsApp for availability and pricing."
+      title="Beauty, skin, hair &amp;"
+      accent="body care"
+      intro="Advanced aesthetic treatments and beauty services, tailored to you. Choose a service and enquire on WhatsApp for availability and pricing."
     >
       <nav class="jump rise" style="--rise-delay: 0.3s" aria-label="Jump to a service">
         @for (s of services; track s.id) {
@@ -46,13 +46,13 @@ import { WhatsappService } from '../../core/services/whatsapp.service';
               <p class="price"><span>Price</span> {{ s.price ?? 'On enquiry' }}</p>
               <div class="d-flex flex-wrap gap-2">
                 <a
-                  class="btn-esha btn-rose"
+                  class="btn-esha btn-maroon"
                   [appEnquireLink]="s.id"
                   [attr.aria-label]="'Enquire now about ' + s.name"
                   >Enquire Now <app-icon name="arrow"
                 /></a>
                 @if (wa.quickLink(s.name); as link) {
-                  <a class="btn-esha btn-outline-rose" [href]="link" target="_blank" rel="noopener" [attr.aria-label]="'Ask about ' + s.name + ' on WhatsApp'"
+                  <a class="btn-esha btn-outline-maroon" [href]="link" target="_blank" rel="noopener" [attr.aria-label]="'Ask about ' + s.name + ' on WhatsApp'"
                     ><app-icon name="whatsapp" /> Ask on WhatsApp</a
                   >
                 }
@@ -69,7 +69,7 @@ import { WhatsappService } from '../../core/services/whatsapp.service';
     @use 'tokens' as *;
     .jump { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
     .jump a { padding: 0.45rem 1rem; border-radius: 999px; border: 1px solid $line; background: rgba(255,255,255,0.75); color: $ink; text-decoration: none; font-size: 0.85rem; min-height: 40px; display: inline-flex; align-items: center; }
-    .jump a:hover { border-color: $rose; color: $rose-deep; }
+    .jump a:hover { border-color: $gold; color: $maroon; }
     .svc { display: grid; gap: 2rem; align-items: center; padding-block: clamp(2rem, 5vw, 3.5rem); border-bottom: 1px solid $line; scroll-margin-top: calc(var(--esha-header-h) + 1rem); }
     .svc:last-child { border-bottom: 0; }
     @include up($bp-lg) {
@@ -78,13 +78,13 @@ import { WhatsappService } from '../../core/services/whatsapp.service';
     }
     .svc-media { aspect-ratio: 4 / 3.4; box-shadow: $shadow-lift; }
     .svc-media img { width: 100%; height: 100%; object-fit: cover; }
-    .num { font-family: $font-display; font-size: 1.1rem; color: $rose; letter-spacing: 0.2em; }
+    .num { font-family: $font-display; font-size: 1.1rem; color: $gold; letter-spacing: 0.2em; }
     .svc-body h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin: 0.25rem 0 0.8rem; }
     .svc-body ul { list-style: none; padding: 0; display: grid; gap: 0.5rem; margin: 1.25rem 0; }
     @include up($bp-sm) { .svc-body ul { grid-template-columns: 1fr 1fr; } }
     .svc-body li { display: flex; gap: 0.5rem; align-items: center; font-size: 0.95rem; }
-    .svc-body li app-icon { color: $rose; }
-    .price { display: inline-flex; gap: 0.6rem; align-items: baseline; font-family: $font-display; font-size: 1.35rem; color: $rose-deep; margin-bottom: 1.25rem; }
+    .svc-body li app-icon { color: $gold; }
+    .price { display: inline-flex; gap: 0.6rem; align-items: baseline; font-family: $font-display; font-size: 1.35rem; color: $maroon; margin-bottom: 1.25rem; }
     .price span { font-family: $font-body; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: $ink-soft; }
   `,
 })

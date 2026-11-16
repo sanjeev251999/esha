@@ -18,8 +18,39 @@
   height: 100%;
   object-fit: cover;
   z-index: -2;
-  filter: saturate(0.9);
+  // Mute the photo into warm ivory/gold tones to match the signboard's marble look.
+  filter: grayscale(0.55) sepia(0.3) saturate(0.9);
   transform: scale(1.04);
+}
+
+.hero-lotus {
+  position: absolute;
+  z-index: -1;
+  width: min(46vw, 560px);
+  right: -4%;
+  top: 14%;
+  color: $gold;
+  opacity: 0.35;
+  pointer-events: none;
+
+  @include down($bp-lg) {
+    width: 70vw;
+    right: -18%;
+    top: auto;
+    bottom: 22%;
+    opacity: 0.22;
+  }
+}
+
+.hero-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: clamp(60px, 9vw, 120px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero-veil {
@@ -27,11 +58,11 @@
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(100deg, rgba(255, 250, 247, 0.97) 0%, rgba(255, 250, 247, 0.9) 42%, rgba(251, 239, 236, 0.7) 70%, rgba(246, 223, 219, 0.55) 100%),
-    radial-gradient(60% 60% at 90% 10%, rgba(239, 220, 192, 0.6), transparent 70%);
+    linear-gradient(100deg, rgba(255, 252, 245, 0.97) 0%, rgba(255, 252, 245, 0.9) 42%, rgba(251, 244, 231, 0.7) 70%, rgba(243, 230, 207, 0.55) 100%),
+    radial-gradient(60% 60% at 90% 10%, rgba(234, 215, 176, 0.6), transparent 70%);
 
   @include down($bp-lg) {
-    background: linear-gradient(180deg, rgba(255, 250, 247, 0.93) 0%, rgba(255, 250, 247, 0.88) 55%, rgba(251, 239, 236, 0.95) 100%);
+    background: linear-gradient(180deg, rgba(255, 252, 245, 0.93) 0%, rgba(255, 252, 245, 0.88) 55%, rgba(251, 244, 231, 0.95) 100%);
   }
 }
 
@@ -45,7 +76,7 @@
     em {
       font-style: italic;
       font-weight: 500;
-      background: linear-gradient(120deg, #c48b86 0%, #8e4a55 60%, #b76e79 100%);
+      background: linear-gradient(120deg, #c9a24e 0%, #7d1f2c 60%, #b08a3e 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -59,7 +90,7 @@
     font-weight: 500;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: $rose-deep;
+    color: $maroon;
     margin-bottom: 0.9rem;
   }
 }
@@ -99,7 +130,7 @@
   .arch-outline {
     position: absolute;
     inset: -14px -14px 14px 14px;
-    border: 1px solid rgba(183, 110, 121, 0.55);
+    border: 1px solid rgba(176, 138, 62, 0.55);
     @include arch();
     z-index: -1;
   }
@@ -117,12 +148,12 @@
   box-shadow: $shadow-soft;
   font-size: 0.85rem;
   font-weight: 500;
-  color: $rose-ink;
+  color: $maroon-ink;
   white-space: nowrap;
   animation: float 6s ease-in-out infinite;
 
   app-icon {
-    color: $rose;
+    color: $gold;
   }
 }
 
@@ -211,8 +242,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: $rose-deep;
-  background: linear-gradient(135deg, $blush-soft, $champagne-soft);
+  color: $maroon;
+  background: linear-gradient(135deg, $cream-soft, $champagne-soft);
 }
 
 // ── About teaser collage ────────────────────────────────────────────────────
@@ -267,10 +298,10 @@
     max-width: 52%;
     line-height: 1.2;
     app-icon {
-      color: $rose;
+      color: $gold;
     }
     em {
-      color: $rose-deep;
+      color: $maroon;
     }
   }
 }
@@ -296,26 +327,26 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(160deg, rgba(110, 53, 64, 0.94) 0%, rgba(58, 37, 43, 0.9) 100%);
+  background: linear-gradient(160deg, rgba(90, 21, 32, 0.94) 0%, rgba(60, 18, 26, 0.9) 100%);
 }
 
 .eyebrow.light {
-  color: #f3d9c9;
+  color: #f1dca5;
 }
 
 .display-title.text-white em {
-  color: #f3d9c9;
+  color: #f1dca5;
 }
 
 .lead-text.light {
-  color: rgba(255, 240, 236, 0.85);
+  color: rgba(255, 246, 232, 0.85);
 }
 
-.btn-outline-light-rose {
+.btn-outline-light {
   color: #fff;
   border-color: rgba(255, 255, 255, 0.5);
   &:hover {
-    color: $rose-deep;
+    color: $maroon;
     background: #fff;
   }
 }
@@ -355,16 +386,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $rose-deep;
+  color: $maroon;
   @include arch();
-  background: linear-gradient(180deg, $blush, $champagne-soft);
+  background: linear-gradient(180deg, $cream, $champagne-soft);
 }
 
 // ── Instagram ───────────────────────────────────────────────────────────────
 .insta-band {
   padding-block: clamp(3.5rem, 7vw, 5rem);
   background:
-    radial-gradient(50% 80% at 50% 0%, rgba(246, 223, 219, 0.9), transparent 70%),
+    radial-gradient(50% 80% at 50% 0%, rgba(243, 230, 207, 0.9), transparent 70%),
     $ivory;
 }
 

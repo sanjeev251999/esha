@@ -59,14 +59,14 @@ import { BUSINESS } from '../../config/business.config';
     @use 'tokens' as *;
     .promo { position: relative; border-radius: $radius-lg; overflow: hidden; isolation: isolate; box-shadow: $shadow-lift; }
     .promo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
-    .promo::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(110deg, rgba(110,53,64,0.95) 0%, rgba(142,74,85,0.85) 55%, rgba(183,110,121,0.35) 100%); }
+    .promo::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(110deg, rgba(90, 21, 32,0.95) 0%, rgba(125, 31, 44,0.85) 55%, rgba(176, 138, 62,0.35) 100%); }
     .promo-body { padding: clamp(2rem, 6vw, 4rem); max-width: 640px; color: #fff; }
     .promo-body h2 { color: #fff; font-size: clamp(2rem, 4.5vw, 3rem); margin: 1rem 0 0.8rem; }
-    .promo-body h2 em { color: #f3d9c9; }
+    .promo-body h2 em { color: #f1dca5; }
     .promo-body p { color: rgba(255,255,255,0.88); margin-bottom: 1.5rem; }
     .tag { display: inline-flex; gap: 0.45rem; align-items: center; padding: 0.4rem 0.9rem; border-radius: 999px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; }
-    .btn-light-solid { background: #fff; color: $rose-deep; }
-    .btn-light-solid:hover { color: $rose-ink; background: $champagne-soft; }
+    .btn-light-solid { background: #fff; color: $maroon; }
+    .btn-light-solid:hover { color: $maroon-ink; background: $champagne-soft; }
     .note { text-align: center; font-size: 0.85rem; color: $ink-soft; margin: 2rem 0 0; }
   `,
 })

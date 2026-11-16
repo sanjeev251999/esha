@@ -1,43 +1,47 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-/** Esha Beauty Paradise monogram + wordmark. Pure SVG/CSS – no image request. */
+/**
+ * Esha Aesthetic Centre logo — crowned gold "E" with maroon leaves, as on the salon signboard,
+ * plus the ESHA / AESTHETIC CENTRE wordmark. Pure SVG/CSS – no image request.
+ */
 @Component({
   selector: 'app-logo',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+    <svg class="logo-mark" viewBox="0 0 48 54" aria-hidden="true" focusable="false">
       <defs>
         <linearGradient [attr.id]="gid()" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#e7b9a6" />
-          <stop offset="0.45" stop-color="#b76e79" />
-          <stop offset="1" stop-color="#7a3c48" />
+          <stop offset="0" stop-color="#f3dc9a" />
+          <stop offset="0.5" stop-color="#c9a24e" />
+          <stop offset="1" stop-color="#8a6420" />
         </linearGradient>
       </defs>
-      <path d="M8 44V22a16 16 0 0 1 32 0v22" fill="none" [attr.stroke]="paint()" stroke-width="1.6" />
-      <path
-        d="M30.5 15.5h-11v7.2h8.6M19.5 22.7v8.8h11.5"
-        fill="none"
-        [attr.stroke]="paint()"
-        stroke-width="2.4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path d="M24 37.5c1.4-2 3.4-2 4.8 0-1.4 2-3.4 2-4.8 0Zm0 0c-1.4-2-3.4-2-4.8 0 1.4 2 3.4 2 4.8 0Z" [attr.fill]="paint()" />
+      <!-- crown -->
+      <path d="M14 15 12.5 5.5 18.5 10 24 3 29.5 10 35.5 5.5 34 15Z" [attr.fill]="paint()" />
+      <circle cx="12.5" cy="5" r="1.4" [attr.fill]="paint()" />
+      <circle cx="24" cy="2.4" r="1.4" [attr.fill]="paint()" />
+      <circle cx="35.5" cy="5" r="1.4" [attr.fill]="paint()" />
+      <!-- maroon leaves -->
+      <path d="M17 46c-7-1-11-6-11-12 6 1 10 5 11 12Z" fill="#7d1f2c" />
+      <path d="M17 46c-5 3-11 3-14-1 5-3 10-3 14 1Z" fill="#962a3a" />
+      <!-- E -->
+      <text x="28" y="48" text-anchor="middle" class="e" [attr.fill]="paint()">E</text>
     </svg>
     <span class="words">
-      <span class="name">Esha</span>
-      <span class="sub">Beauty Paradise</span>
+      <span class="name">ESHA</span>
+      <span class="sub">Aesthetic Centre</span>
     </span>
   `,
   styles: `
     @use 'tokens' as *;
-    :host { display: inline-flex; align-items: center; gap: 0.6rem; color: inherit; }
-    .logo-mark { width: 2.5rem; height: 2.5rem; flex-shrink: 0; }
+    :host { display: inline-flex; align-items: center; gap: 0.55rem; color: inherit; }
+    .logo-mark { width: 2.4rem; height: 2.7rem; flex-shrink: 0; overflow: visible; }
+    .e { font-family: 'Cinzel', $font-display; font-weight: 700; font-size: 36px; }
     .words { display: flex; flex-direction: column; line-height: 1; }
-    .name { font-family: $font-display; font-style: italic; font-weight: 600; font-size: 1.75rem; color: $rose-ink; letter-spacing: 0.01em; }
-    .sub { font-family: $font-body; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: $ink-soft; margin-top: 0.2rem; }
+    .name { font-family: 'Cinzel', $font-display; font-weight: 700; font-size: 1.5rem; color: $maroon; letter-spacing: 0.08em; }
+    .sub { font-family: 'Cinzel', $font-display; font-size: 0.56rem; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: $gold; margin-top: 0.25rem; }
     :host(.on-dark) .name { color: #fff; }
-    :host(.on-dark) .sub { color: rgba(255, 255, 255, 0.78); }
+    :host(.on-dark) .sub { color: $gold-light; }
   `,
 })
 export class Logo {

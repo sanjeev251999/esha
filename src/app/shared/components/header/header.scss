@@ -19,12 +19,12 @@
 }
 
 :host(.scrolled) .site-header {
-  background: rgba(255, 250, 247, 0.92);
+  background: rgba(255, 252, 245, 0.92);
   backdrop-filter: saturate(1.4) blur(14px);
   -webkit-backdrop-filter: saturate(1.4) blur(14px);
   box-shadow:
-    0 1px 0 rgba(183, 110, 121, 0.18),
-    0 10px 30px -20px rgba(110, 53, 64, 0.35);
+    0 1px 0 rgba(176, 138, 62, 0.18),
+    0 10px 30px -20px rgba(90, 21, 32, 0.35);
 }
 
 .header-inner {
@@ -66,7 +66,7 @@
 
     &:hover,
     &.active {
-      color: $rose-deep;
+      color: $maroon;
       &::after {
         width: 100%;
         left: 0;
@@ -89,13 +89,13 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  border: 1px solid rgba(183, 110, 121, 0.35);
+  border: 1px solid rgba(176, 138, 62, 0.35);
   background: rgba(255, 255, 255, 0.7);
-  color: $rose-deep;
+  color: $maroon;
   transition: background-color 0.25s $ease;
 
   &:hover {
-    background: $blush-soft;
+    background: $cream-soft;
   }
 }
 
@@ -106,8 +106,8 @@
   z-index: 1;
   padding: calc(var(--esha-header-h) + 1.5rem) 1.5rem 2rem;
   background:
-    radial-gradient(80% 50% at 100% 0%, rgba(239, 220, 192, 0.8), transparent 60%),
-    radial-gradient(70% 50% at 0% 100%, rgba(246, 223, 219, 0.95), transparent 60%),
+    radial-gradient(80% 50% at 100% 0%, rgba(234, 215, 176, 0.8), transparent 60%),
+    radial-gradient(70% 50% at 0% 100%, rgba(243, 230, 207, 0.95), transparent 60%),
     $ivory;
   display: flex;
   flex-direction: column;
@@ -138,7 +138,7 @@
       color: $ink;
       text-decoration: none;
       padding: 0.55rem 0;
-      border-bottom: 1px solid rgba(183, 110, 121, 0.15);
+      border-bottom: 1px solid rgba(176, 138, 62, 0.15);
       opacity: 0;
       transform: translateX(-10px);
       transition:
@@ -148,7 +148,7 @@
       transition-delay: calc(var(--i) * 45ms + 80ms);
 
       &.active {
-        color: $rose-deep;
+        color: $maroon;
         font-style: italic;
       }
     }
@@ -170,7 +170,7 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    color: $rose-deep;
+    color: $maroon;
     text-decoration: none;
     padding-top: 0.5rem;
   }

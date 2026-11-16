@@ -6,14 +6,14 @@
 @use 'tokens' as t;
 
 // Bootstrap overrides (must come before Bootstrap variables)
-$primary: t.$rose-deep;
+$primary: t.$maroon;
 $secondary: t.$champagne;
 $success: t.$whatsapp;
 $danger: #b3261e;
 $body-bg: t.$ivory;
 $body-color: t.$ink;
-$link-color: t.$rose-deep;
-$link-hover-color: t.$rose-ink;
+$link-color: t.$maroon;
+$link-hover-color: t.$maroon-ink;
 $font-family-base: t.$font-body;
 $headings-font-family: t.$font-display;
 $headings-font-weight: 600;
@@ -24,9 +24,9 @@ $border-color: t.$line;
 $border-radius: t.$radius-sm;
 $border-radius-lg: t.$radius;
 $input-bg: #fff;
-$input-border-color: #e3cfc9;
-$input-focus-border-color: t.$rose;
-$input-focus-box-shadow: 0 0 0 0.22rem rgba(183, 110, 121, 0.2);
+$input-border-color: #e2d2b4;
+$input-focus-border-color: t.$gold;
+$input-focus-box-shadow: 0 0 0 0.22rem rgba(176, 138, 62, 0.2);
 $input-padding-y: 0.8rem;
 $input-padding-x: 1rem;
 $input-border-radius: t.$radius-sm;

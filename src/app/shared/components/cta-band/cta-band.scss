@@ -10,8 +10,8 @@
   border-radius: $radius-lg;
   padding: clamp(2rem, 5vw, 3.5rem);
   background:
-    radial-gradient(70% 120% at 100% 0%, rgba(243, 217, 201, 0.35), transparent 60%),
-    linear-gradient(135deg, #a35a66 0%, #8e4a55 50%, #6e3540 100%);
+    radial-gradient(70% 120% at 100% 0%, rgba(241, 220, 165, 0.35), transparent 60%),
+    linear-gradient(135deg, #962a3a 0%, #7d1f2c 50%, #5a1520 100%);
   color: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -41,7 +41,7 @@
     font-size: clamp(1.9rem, 3.6vw, 2.8rem);
     margin-bottom: 0.6rem;
     em {
-      color: #f3d9c9;
+      color: #f1dca5;
     }
   }
   p {
@@ -51,7 +51,7 @@
 }
 
 .eyebrow.light {
-  color: #f3d9c9;
+  color: #f1dca5;
 }
 
 .buttons {
@@ -64,9 +64,9 @@
 
 .btn-light-solid {
   background: #fff;
-  color: $rose-deep;
+  color: $maroon;
   &:hover {
-    color: $rose-ink;
+    color: $maroon-ink;
     background: $champagne-soft;
   }
 }

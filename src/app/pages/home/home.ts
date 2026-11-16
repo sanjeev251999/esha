@@ -42,16 +42,16 @@ export class Home {
   protected readonly waLink = inject(WhatsappService).quickLink();
 
   protected readonly highlights: { icon: IconName; title: string; text: string }[] = [
-    { icon: 'gem', title: 'Bridal & Party Makeup', text: 'Looks designed for your big day' },
-    { icon: 'scissors', title: 'Hair Styling & Spa', text: 'Styles, care and treatments' },
-    { icon: 'flower', title: 'Facials & Skin Care', text: 'Fresh, healthy, glowing skin' },
+    { icon: 'gem', title: 'All Makeups', text: 'Bridal, party & HD looks' },
+    { icon: 'sparkles', title: 'Laser & Skin', text: 'Clearer, glowing skin' },
+    { icon: 'flower', title: 'Brows, Mehandi & Tattoo', text: 'Artistry in every detail' },
     { icon: 'chat', title: 'Easy WhatsApp Booking', text: 'Enquire in under a minute' },
   ];
 
   protected readonly promises: { icon: IconName; title: string; text: string }[] = [
     { icon: 'user', title: 'Personal consultation', text: 'We listen first and suggest what suits your skin, hair, outfit and occasion.' },
     { icon: 'shield', title: 'Hygiene & comfort', text: 'A clean, calm and welcoming space where you can truly relax.' },
-    { icon: 'brush', title: 'Carefully chosen products', text: 'We select products with care to suit different skin and hair types.' },
+    { icon: 'brush', title: 'Consultation first', text: 'Advanced treatments are planned only after we understand your needs.' },
     { icon: 'heart', title: 'Your satisfaction', text: 'We take the time to make sure you leave happy and confident.' },
   ];
 }

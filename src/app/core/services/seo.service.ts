@@ -54,7 +54,7 @@ export class SeoService {
     this.setProperty('og:image', image);
     this.setProperty('og:image:width', '1200');
     this.setProperty('og:image:height', '630');
-    this.setProperty('og:image:alt', `${BUSINESS.name} – beauty salon`);
+    this.setProperty('og:image:alt', `${BUSINESS.name} – beauty, skin, hair & body care`);
 
     this.setName('twitter:card', 'summary_large_image');
     this.setName('twitter:title', fullTitle);

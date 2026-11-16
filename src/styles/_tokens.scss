@@ -1,26 +1,27 @@
 // ─────────────────────────────────────────────────────────────────────────────
-//  Esha Beauty Paradise – design tokens (Sass only, emits no CSS).
+//  Esha Aesthetic Centre – design tokens (Sass only, emits no CSS).
+//  Palette taken from the salon signboard: ivory marble, metallic gold, deep maroon.
 //  Use in component styles with:  @use 'tokens' as *;
 // ─────────────────────────────────────────────────────────────────────────────
 
 // Brand palette
-$rose: #b76e79; //        rose gold
-$rose-deep: #8e4a55; //   deep rose (text-safe on light backgrounds)
-$rose-ink: #6e3540; //    darkest rose for headings accents
-$blush: #f6dfdb; //       blush pink
-$blush-soft: #fbefec; //  soft blush background
-$champagne: #efdcc0; //   champagne
-$champagne-soft: #f8efe2;
-$gold: #c9a27a; //        warm metallic accent
-$ivory: #fffaf7; //       page background
-$ink: #3a2a2e; //         body text
-$ink-soft: #6f5a5f; //    secondary text
-$line: #ecd9d3; //        hairlines & borders
-$whatsapp: #168a45; //    WhatsApp green (AA contrast with white text)
+$maroon: #7d1f2c; //       primary – buttons, links, headings accents
+$maroon-ink: #5a1520; //   darkest maroon
+$gold: #b08a3e; //         metallic gold – icons, lines, ornaments (decorative)
+$gold-light: #e8cf95; //   light gold – accents on dark backgrounds
+$cream: #f3e6cf; //        warm cream sections
+$cream-soft: #fbf4e7; //   soft cream background
+$champagne: #ead7b0;
+$champagne-soft: #f8f0e1;
+$ivory: #fffcf5; //        page background (marble ivory)
+$ink: #2f1d1f; //          body text
+$ink-soft: #6a5650; //     secondary text
+$line: #e9dcc3; //         hairlines & borders
+$whatsapp: #168a45; //     WhatsApp green (AA contrast with white text)
 
-$rose-gradient: linear-gradient(135deg, #d29a9c 0%, #b76e79 45%, #8e4a55 100%);
-$metal-gradient: linear-gradient(120deg, #e9c6b5 0%, #c48b86 35%, #f3d9c9 55%, #b76e79 100%);
-$blush-gradient: linear-gradient(160deg, #fffaf7 0%, #fbefec 55%, #f6dfdb 100%);
+$maroon-gradient: linear-gradient(135deg, #962a3a 0%, #7d1f2c 55%, #5a1520 100%);
+$metal-gradient: linear-gradient(120deg, #f3e2b3 0%, #c9a24e 35%, #f6e7c1 55%, #a8782c 100%);
+$cream-gradient: linear-gradient(160deg, #fffcf5 0%, #fbf4e7 55%, #f3e6cf 100%);
 
 // Typography
 $font-display: 'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif;
@@ -30,8 +31,8 @@ $font-body: 'Jost', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 $radius-sm: 10px;
 $radius: 18px;
 $radius-lg: 28px;
-$shadow-soft: 0 10px 30px -12px rgba(110, 53, 64, 0.18);
-$shadow-lift: 0 22px 45px -18px rgba(110, 53, 64, 0.32);
+$shadow-soft: 0 10px 30px -12px rgba(90, 21, 32, 0.16);
+$shadow-lift: 0 22px 45px -18px rgba(90, 21, 32, 0.3);
 $ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 
 // Layout
@@ -56,7 +57,7 @@ $bp-xl: 1200px;
   }
 }
 
-/// Arched top frame — the signature shape of the brand.
+/// Arched top frame — a signature shape of the brand.
 @mixin arch($r: 999px) {
   border-radius: $r $r $radius $radius;
 }

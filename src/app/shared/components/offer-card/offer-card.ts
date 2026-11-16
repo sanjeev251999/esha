@@ -38,7 +38,7 @@ import { Offer } from '../../../models/content.model';
         </p>
       }
       <a
-        class="btn-esha btn-rose w-100 mt-auto"
+        class="btn-esha btn-maroon w-100 mt-auto"
         [appEnquireLink]="offer().serviceId"
         [attr.aria-label]="'Enquire now about ' + offer().title"
         >Enquire Now</a

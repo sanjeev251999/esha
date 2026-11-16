@@ -11,8 +11,8 @@
 .lp-hero {
   padding: calc(var(--esha-header-h) + 1.5rem) 0 3rem;
   background:
-    radial-gradient(70% 60% at 100% 0%, rgba(239, 220, 192, 0.75), transparent 60%),
-    radial-gradient(60% 60% at 0% 100%, rgba(246, 223, 219, 0.9), transparent 60%),
+    radial-gradient(70% 60% at 100% 0%, rgba(234, 215, 176, 0.75), transparent 60%),
+    radial-gradient(60% 60% at 0% 100%, rgba(243, 230, 207, 0.9), transparent 60%),
     $ivory;
 
   h1 {
@@ -20,7 +20,7 @@
     line-height: 1.04;
     margin-bottom: 1rem;
     em {
-      color: $rose-deep;
+      color: $maroon;
       font-weight: 500;
     }
   }
@@ -52,7 +52,7 @@
     align-items: center;
   }
   app-icon {
-    color: $rose;
+    color: $gold;
   }
 }
 
@@ -89,9 +89,9 @@
   box-shadow: $shadow-soft;
   font-size: 0.8rem;
   font-weight: 500;
-  color: $rose-ink;
+  color: $maroon-ink;
   app-icon {
-    color: $rose;
+    color: $gold;
   }
 }
 
@@ -120,7 +120,7 @@
     display: block;
     text-align: left;
     color: #fff;
-    background: $blush;
+    background: $cream;
 
     img {
       position: absolute;
@@ -134,7 +134,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(58, 37, 43, 0.82) 0%, rgba(58, 37, 43, 0.1) 60%);
+      background: linear-gradient(to top, rgba(60, 18, 26, 0.82) 0%, rgba(60, 18, 26, 0.1) 60%);
     }
     &:hover img,
     &:focus-visible img {
@@ -204,9 +204,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 0.6rem;
   padding: 0.7rem 0.9rem calc(0.7rem + env(safe-area-inset-bottom));
-  background: rgba(255, 250, 247, 0.96);
+  background: rgba(255, 252, 245, 0.96);
   backdrop-filter: blur(12px);
-  box-shadow: 0 -10px 30px -18px rgba(110, 53, 64, 0.45);
+  box-shadow: 0 -10px 30px -18px rgba(90, 21, 32, 0.45);
   border-top: 1px solid $line;
 
   .btn-esha {

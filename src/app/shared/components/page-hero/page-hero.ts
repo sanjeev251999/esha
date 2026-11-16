@@ -33,7 +33,7 @@ import { RouterLink } from '@angular/router';
     .petal {
       position: absolute;
       border-radius: 999px 999px 0 999px;
-      background: linear-gradient(135deg, rgba(231, 185, 166, 0.45), rgba(183, 110, 121, 0.15));
+      background: linear-gradient(135deg, rgba(232, 207, 149, 0.45), rgba(176, 138, 62, 0.15));
       pointer-events: none;
     }
     .p1 { width: 160px; height: 160px; left: -50px; top: 30%; transform: rotate(-20deg); }

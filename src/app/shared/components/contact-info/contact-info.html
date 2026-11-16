@@ -1,6 +1,6 @@
 <div class="info-card">
   <h2 class="h3">{{ b.name }}</h2>
-  <p class="intro">We would love to hear from you. Reach us on WhatsApp, call, or visit the salon.</p>
+  <p class="intro">We would love to hear from you. Reach us on WhatsApp, call, or visit our centre in Nagercoil.</p>
 
   <ul class="details">
     <li>
@@ -83,7 +83,7 @@
     @if (mapUrl) {
       <iframe
         [src]="mapUrl"
-        title="Map showing the location of Esha Beauty Paradise"
+        [title]="'Map showing the location of ' + b.name"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         allowfullscreen

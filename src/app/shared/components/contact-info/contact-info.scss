@@ -44,12 +44,12 @@
     font-weight: 500;
     overflow-wrap: anywhere;
     &:hover {
-      color: $rose-deep;
+      color: $maroon;
     }
   }
   .small-link {
     font-size: 0.85rem;
-    color: $rose-deep;
+    color: $maroon;
   }
 }
 
@@ -58,8 +58,8 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: $blush-soft;
-  color: $rose-deep;
+  background: $cream-soft;
+  color: $maroon;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +102,7 @@
   overflow: hidden;
   border: 1px solid $line;
   min-height: 280px;
-  background: $blush-soft;
+  background: $cream-soft;
 
   iframe {
     display: block;
@@ -122,18 +122,18 @@
   gap: 0.5rem;
   text-align: center;
   padding: 2rem;
-  color: $rose-deep;
+  color: $maroon;
   background:
-    radial-gradient(circle at 30% 30%, rgba(239, 220, 192, 0.7), transparent 50%),
-    repeating-linear-gradient(45deg, rgba(183, 110, 121, 0.06) 0 2px, transparent 2px 14px),
-    $blush-soft;
+    radial-gradient(circle at 30% 30%, rgba(234, 215, 176, 0.7), transparent 50%),
+    repeating-linear-gradient(45deg, rgba(176, 138, 62, 0.06) 0 2px, transparent 2px 14px),
+    $cream-soft;
 
   p {
     margin: 0;
     color: $ink-soft;
   }
   a {
-    color: $rose-deep;
+    color: $maroon;
     font-weight: 500;
   }
 }

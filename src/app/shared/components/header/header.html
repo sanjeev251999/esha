@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" routerLink="/" aria-label="Esha Beauty Paradise – home">
+    <a class="brand" routerLink="/" aria-label="Esha Aesthetic Centre – home">
       <app-logo gid="logo-header" />
     </a>
 
@@ -18,7 +18,7 @@
       </nav>
 
       <div class="actions">
-        <a class="btn-esha btn-rose btn-sm d-none d-sm-inline-flex" appEnquireLink>Enquire Now</a>
+        <a class="btn-esha btn-maroon btn-sm d-none d-sm-inline-flex" appEnquireLink>Enquire Now</a>
         <button
           type="button"
           class="menu-toggle d-lg-none"
@@ -40,7 +40,7 @@
         @if (waLink) {
           <a class="btn-esha btn-wa btn-sm" [href]="waLink" target="_blank" rel="noopener"> <app-icon name="whatsapp" /> WhatsApp </a>
         } @else {
-          <button type="button" class="btn-esha btn-rose btn-sm" (click)="scrollToEnquiry()">Enquire Now</button>
+          <button type="button" class="btn-esha btn-maroon btn-sm" (click)="scrollToEnquiry()">Enquire Now</button>
         }
       </div>
     }
@@ -68,7 +68,7 @@
       }
     </nav>
     <div class="mobile-cta">
-      <a class="btn-esha btn-rose w-100" appEnquireLink (click)="menuOpen.set(false)">Enquire Now</a>
+      <a class="btn-esha btn-maroon w-100" appEnquireLink (click)="menuOpen.set(false)">Enquire Now</a>
       @if (waLink) {
         <a class="btn-esha btn-wa w-100" [href]="waLink" target="_blank" rel="noopener"><app-icon name="whatsapp" /> Chat on WhatsApp</a>
       }
