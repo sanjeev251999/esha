@@ -18,7 +18,7 @@ All images were resized, cropped and converted to WebP for fast loading.
 | services/all-makeups.webp | Makeup Artist | StockSnap | CC0 | https://stocksnap.io/photo/makeup-artist-0VSOU0YJF6 |
 | services/body-contouring.webp | Fashion Waist | StockSnap | CC0 | https://stocksnap.io/photo/fashion-waist-VVCEOWJ6GM |
 | services/botox-fillers.webp | Beauty Skincare | StockSnap | CC0 | https://stocksnap.io/photo/beauty-skincare-LRSAT4NCLS |
-| services/hair-treatments.webp | Untitled | rawpixel | CC0 | https://www.rawpixel.com/image/5944492/free-public-domain-cc0-photo |
+| services/hair-treatments.webp | Hair loss close-up | rawpixel | CC0 | https://www.rawpixel.com/image/5940251/free-public-domain-cc0-photo |
 | services/laser-treatment.webp | Woman Massage | StockSnap | CC0 | https://stocksnap.io/photo/woman-massage-U2PRCV7BEQ |
 | services/mehandi.webp | Untitled | rawpixel | CC0 | https://www.rawpixel.com/image/5922607/free-public-domain-cc0-photo |
 | services/microblading.webp | Eyes Eyelashes | StockSnap | CC0 | https://stocksnap.io/photo/eyes-eyelashes-2B47ZJBEU3 |
