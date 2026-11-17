@@ -17,7 +17,7 @@ export const GALLERY: GalleryImage[] = [
   { src: 'assets/images/gallery/gallery-05.webp', alt: 'Tattoo artist tattooing fine script lettering on an arm', category: 'Tattoo', width: 900, height: 731 },
   { src: 'assets/images/gallery/gallery-04.webp', alt: 'Bride wearing red and gold bridal bangles with an embellished lehenga', category: 'Bridal', width: 900, height: 675 },
   { src: 'assets/images/gallery/gallery-06.webp', alt: 'Client relaxing during a facial skin treatment', category: 'Skin', width: 900, height: 600 },
-  { src: 'assets/images/gallery/gallery-09.webp', alt: 'Hair colour treatment with foils in the salon', category: 'Hair', width: 900, height: 598 },
+  { src: 'assets/images/gallery/gallery-09.webp', alt: 'Woman applying skin care cream for glowing skin', category: 'Skin', width: 900, height: 600 },
   { src: 'assets/images/gallery/gallery-11.webp', alt: 'Bride’s hands with mehandi and colourful bangles', category: 'Bridal', width: 900, height: 428 },
   { src: 'assets/images/gallery/gallery-08.webp', alt: 'Nail technician shaping and caring for a client’s nails', category: 'Nails', width: 900, height: 600 },
   { src: 'assets/images/gallery/gallery-10.webp', alt: 'Makeup artist with a professional brush set', category: 'Makeup', width: 900, height: 600 },

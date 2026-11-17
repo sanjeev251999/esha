@@ -34,7 +34,7 @@ All images were resized, cropped and converted to WebP for fast loading.
 | gallery/gallery-06.webp | Woman Massage | StockSnap | CC0 | https://stocksnap.io/photo/woman-massage-U2PRCV7BEQ |
 | gallery/gallery-07.webp | Free Indian wedding photo | rawpixel | CC0 | https://www.rawpixel.com/image/5924300/free-indian-wedding-photo-public-domain-cc0 |
 | gallery/gallery-08.webp | People Hands | StockSnap | CC0 | https://stocksnap.io/photo/people-hands-5M4DNCN8ZW |
-| gallery/gallery-09.webp | Untitled | rawpixel | CC0 | https://www.rawpixel.com/image/5944492/free-public-domain-cc0-photo |
+| gallery/gallery-09.webp | Woman Skin | StockSnap | CC0 | https://stocksnap.io/photo/woman-skin-ETWN6UD9US |
 | gallery/gallery-10.webp | Makeup artist brushes | rawpixel | CC0 | https://www.rawpixel.com/image/6035373/photo-image-public-domain-person-brushes |
 | gallery/gallery-11.webp | Free Indian wedding photo | rawpixel | CC0 | https://www.rawpixel.com/image/5922055/free-indian-wedding-photo-public-domain-cc0 |
 | gallery/gallery-12.webp | Tattoo artist | rawpixel | CC0 | https://www.rawpixel.com/image/3370012/free-photo-image-tattooer-tattoo-artist-arm |
