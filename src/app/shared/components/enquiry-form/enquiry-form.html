@@ -8,6 +8,12 @@
   </div>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate aria-labelledby="enquiry-title">
+    <!-- Spam trap: hidden from people, often filled in by bots -->
+    <div class="hp" aria-hidden="true">
+      <label
+        >Website <input type="text" name="website" tabindex="-1" autocomplete="off" (input)="honeypot = $any($event.target).value"
+      /></label>
+    </div>
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="enq-name">Your name <span class="required-mark" aria-hidden="true">*</span></label>
@@ -160,6 +166,43 @@
             }
           </span>
         </div>
+      }
+    }
+
+    <!-- Google Sheet record status (only when the Sheet is connected) -->
+    @switch (saveState()) {
+      @case ('saving') {
+        <p class="save-line">Saving your enquiry…</p>
+      }
+      @case ('saved') {
+        <div class="note ok">
+          <strong><app-icon name="check" /> Your enquiry has been received.</strong>
+          <span>Our team will contact you on {{ form.controls.mobile.value }} soon.</span>
+          @if (status() === 'idle') {
+            <span class="links">
+              @if (waUrl(); as url) {
+                <a [href]="url" target="_blank" rel="noopener"><app-icon name="whatsapp" /> Also chat on WhatsApp</a>
+              }
+              <button type="button" class="linklike" (click)="reset()">Start a new enquiry</button>
+            </span>
+          }
+        </div>
+      }
+      @case ('failed') {
+        @if (status() === 'idle') {
+          <div class="note warn">
+            <strong>We couldn't save your enquiry online.</strong>
+            <span>Please send it on WhatsApp or call us — we will help you right away.</span>
+            <span class="links">
+              @if (waUrl(); as url) {
+                <a [href]="url" target="_blank" rel="noopener"><app-icon name="whatsapp" /> Send on WhatsApp</a>
+              }
+              @if (telLink) {
+                <a [href]="telLink"><app-icon name="phone" /> {{ business.phoneNumber }}</a>
+              }
+            </span>
+          </div>
+        }
       }
     }
   </div>

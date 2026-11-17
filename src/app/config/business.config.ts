@@ -50,4 +50,9 @@ export const BUSINESS: BusinessConfig = {
   // Indian mobile numbers: 10 digits starting 6–9, optional +91 / 91 / 0 prefix.
   mobilePattern: /^(?:\+?91|0)?[6-9]\d{9}$/,
   mobilePatternHint: 'Please enter a valid 10-digit mobile number.',
+
+  // Record every enquiry in a Google Sheet (+ email alert). Paste the Apps Script web-app URL
+  // here (see scripts/google-sheet-leads.gs). Empty = off: the form only opens WhatsApp.
+  leadCaptureUrl: '',
+  leadCaptureMode: 'save-and-whatsapp',
 };

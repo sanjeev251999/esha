@@ -40,4 +40,15 @@ export interface BusinessConfig {
    */
   mobilePattern: RegExp;
   mobilePatternHint: string;
+  /**
+   * Google Apps Script web-app URL (ends with /exec) that records enquiries in a Google Sheet.
+   * Leave empty to disable – the form then only opens WhatsApp. See scripts/google-sheet-leads.gs.
+   */
+  leadCaptureUrl: string;
+  /**
+   * What the form does when leadCaptureUrl is set:
+   *  - 'save-and-whatsapp': record in the Sheet AND open WhatsApp with the enquiry.
+   *  - 'save-only': record in the Sheet only; the customer sees a "we will contact you" message.
+   */
+  leadCaptureMode: 'save-and-whatsapp' | 'save-only';
 }

@@ -117,3 +117,18 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+// Spam trap field – off-screen for people, still present for bots
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.save-line {
+  margin: 1rem 0 0;
+  font-size: 0.88rem;
+  color: $ink-soft;
+}

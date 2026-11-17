@@ -49,6 +49,17 @@ workingHours: [
 Anything left empty (`''`) is **hidden or shown as "To be updated"**. The site never displays made-up details.
 Until `whatsappNumber` is set, chat buttons fall back to **Instagram Direct Messages**, and the form tells customers clearly that their enquiry was **not** sent.
 
+### Enquiry register in Google Sheets (optional)
+
+Every form enquiry can also be recorded as a row in a Google Sheet (plus an email alert), even if the customer never presses Send in WhatsApp.
+
+1. Create a Google Sheet, e.g. **Esha Enquiries**.
+2. **Extensions → Apps Script**, delete the sample code, paste all of `scripts/google-sheet-leads.gs`, then **Save**.
+3. **Deploy → New deployment → Web app**. Set *Execute as:* **Me** and *Who has access:* **Anyone**. Click **Deploy**, allow the permissions, and copy the **Web app URL** (it ends with `/exec`).
+4. Paste it into `leadCaptureUrl` in `src/app/config/business.config.ts`, then commit and push.
+
+`leadCaptureMode: 'save-and-whatsapp'` records the enquiry **and** opens WhatsApp, which is the default. `'save-only'` records it without opening WhatsApp.
+
 ### 2. Services and prices → `src/app/content/services.content.ts`
 
 Each service has a `name`, `summary`, `description`, `highlights`, `image` and an optional `price`:

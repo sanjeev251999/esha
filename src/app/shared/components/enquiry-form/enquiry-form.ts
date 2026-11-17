@@ -7,6 +7,7 @@ import { BUSINESS } from '../../../config/business.config';
 import { SERVICES, findService } from '../../../content/services.content';
 import { WhatsappService } from '../../../core/services/whatsapp.service';
 import { EnquiryService } from '../../../core/services/enquiry.service';
+import { LeadService } from '../../../core/services/lead.service';
 
 type Status = 'idle' | 'opened' | 'blocked' | 'not-configured';
 
@@ -53,6 +54,11 @@ export class EnquiryForm {
   protected readonly status = signal<Status>('idle');
   protected readonly waUrl = signal<string | null>(null);
   protected readonly submitted = signal(false);
+  /** Google Sheet record state (only used when leadCaptureUrl is configured). */
+  protected readonly saveState = signal<'idle' | 'saving' | 'saved' | 'failed'>('idle');
+  protected readonly leads = inject(LeadService);
+  /** Spam-trap value from the hidden "website" field. */
+  protected honeypot = '';
 
   private readonly fb = inject(NonNullableFormBuilder);
   private readonly whatsapp = inject(WhatsappService);
@@ -103,6 +109,8 @@ export class EnquiryForm {
       return;
     }
 
+    if (this.saveState() === 'saving') return; // avoid duplicate rows from double taps
+
     const v = this.form.getRawValue();
     const serviceName = v.service === OTHER ? 'Other / Not sure yet' : (findService(v.service)?.name ?? v.service);
     const message = this.whatsapp.enquiryMessage({
@@ -114,15 +122,41 @@ export class EnquiryForm {
       source: this.source,
     });
 
-    const { result, url } = this.whatsapp.open(message);
-    this.waUrl.set(url);
-    this.status.set(result);
+    const saveOnly = this.leads.isConfigured && BUSINESS.leadCaptureMode === 'save-only';
+
+    // WhatsApp must open synchronously inside the tap, or browsers block it as a pop-up.
+    if (saveOnly) {
+      this.waUrl.set(this.whatsapp.link(message));
+      this.status.set('idle');
+    } else {
+      const { result, url } = this.whatsapp.open(message);
+      this.waUrl.set(url);
+      this.status.set(result);
+    }
+
+    // Record the enquiry in the Google Sheet at the same time (only when configured).
+    if (this.leads.isConfigured) {
+      this.saveState.set('saving');
+      void this.leads
+        .save({
+          name: v.name.trim(),
+          mobile: v.mobile.trim(),
+          service: serviceName,
+          preferredDate: v.preferredDate,
+          message: v.message.trim(),
+          source: this.source || 'website',
+          page: typeof location !== 'undefined' ? location.pathname : '',
+          website: this.honeypot,
+        })
+        .then((ok) => this.saveState.set(ok ? 'saved' : 'failed'));
+    }
   }
 
   protected reset(): void {
     this.form.reset();
     this.submitted.set(false);
     this.status.set('idle');
+    this.saveState.set('idle');
     this.waUrl.set(null);
   }
 }
