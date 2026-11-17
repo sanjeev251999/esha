@@ -157,6 +157,35 @@
   </div>
 </section>
 
+<!-- ── BEFORE & AFTER (illustrative) ────────────────────────────────────── -->
+<section class="section" aria-labelledby="results-title">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Before &amp; After"
+      title="What our treatments"
+      accent="aim for"
+      intro="See the kind of change each treatment works towards. Your plan and results are discussed in a personal consultation."
+      headingId="results-title"
+    />
+    <p class="illustrative-note" appReveal>
+      <app-icon name="shield" size="0.95em" /> Illustrative images — not actual client results. Individual results vary.
+    </p>
+    <div class="row g-4">
+      @for (r of results; track r.image; let i = $index) {
+        <div class="col-md-6">
+          <figure class="result-card" [appReveal]="(i % 2) * 90 + 'ms'">
+            <img [src]="r.image" [alt]="r.alt" width="760" height="520" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>{{ r.title }}</span>
+              <a class="btn-link-maroon" [appEnquireLink]="r.serviceId">Enquire <app-icon name="arrow" size="0.95em" /></a>
+            </figcaption>
+          </figure>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
 <!-- ── OFFERS ───────────────────────────────────────────────────────────── -->
 <section class="offers-band" aria-labelledby="offers-title">
   <img class="offers-bg" src="assets/images/offers/offers-banner.webp" alt="" width="960" height="641" loading="lazy" decoding="async" />

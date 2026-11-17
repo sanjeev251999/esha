@@ -41,7 +41,18 @@ export class Home {
   protected readonly gallery = GALLERY;
   protected readonly waLink = inject(WhatsappService).quickLink();
 
-  protected readonly highlights: { icon: IconName; title: string; text: string }[] = [
+  /**
+   * Before/after panels. These are ILLUSTRATIVE images, not Esha's own client results, so the page
+   * shows a clear disclaimer. Replace with real client photos (with consent) when available.
+   */
+  protected readonly results = [
+    { image: 'assets/images/results/weight-loss.webp', title: 'Body Contouring & Slimming', serviceId: 'body-contouring', alt: 'Illustrative before and after of weight loss treatment' },
+    { image: 'assets/images/results/laser.webp', title: 'Laser Treatment', serviceId: 'laser-treatment', alt: 'Illustrative before and after of laser facial hair removal' },
+    { image: 'assets/images/results/skin.webp', title: 'Skin Treatment', serviceId: 'skin-treatments', alt: 'Illustrative before and after of acne skin treatment' },
+    { image: 'assets/images/results/hair-loss.webp', title: 'Hair Loss Treatment', serviceId: 'hair-treatments', alt: 'Illustrative before and after of hair loss treatment' },
+  ];
+
+  protected readonly highlights:{ icon: IconName; title: string; text: string }[] = [
     { icon: 'gem', title: 'All Makeups', text: 'Bridal, party & HD looks' },
     { icon: 'sparkles', title: 'Laser & Skin', text: 'Clearer, glowing skin' },
     { icon: 'flower', title: 'Brows, Mehandi & Tattoo', text: 'Artistry in every detail' },

@@ -483,3 +483,46 @@
   margin-bottom: 1rem;
   background: linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #8134af 100%);
 }
+
+// ── Before & After (illustrative) ──────────────────────────────────────────
+.illustrative-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: -1rem auto 2rem;
+  font-size: 0.85rem;
+  color: $ink-soft;
+  text-align: center;
+}
+
+.result-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid $line;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-soft;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1.2rem;
+    border-top: 1px solid $line;
+
+    span {
+      font-family: $font-display;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $ink;
+    }
+  }
+}

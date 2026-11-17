@@ -40,3 +40,7 @@ All images were resized, cropped and converted to WebP for fast loading.
 | gallery/gallery-12.webp | Tattoo artist | rawpixel | CC0 | https://www.rawpixel.com/image/3370012/free-photo-image-tattooer-tattoo-artist-arm |
 
 The social-share image (`public/og-image.jpg`) is composed from `hero-portrait.webp`. Icons are from [Bootstrap Icons](https://icons.getbootstrap.com) (MIT License).
+
+## Before & after panels
+
+`src/assets/images/results/*.webp` were cropped from an image supplied by the site owner ("Laser Treatment Facial Hair Before and After.png"). They are shown on the Home page as **illustrative images, not actual client results**, with that disclaimer visible. Replace them with genuine client photos (with written consent) when available, then remove the disclaimer.
