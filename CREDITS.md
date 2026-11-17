@@ -9,7 +9,7 @@ They are **placeholders** until real Esha Aesthetic Centre photos are added. Rep
 
 All images were resized, cropped and converted to WebP for fast loading.
 
-| File (in `src/assets/images/`) | Original title | Source | License | Link |
+| File (in `src/assets/media/`) | Original title | Source | License | Link |
 | --- | --- | --- | --- | --- |
 | hero/hero-bg.webp | Makeup Brush | StockSnap | CC0 | https://stocksnap.io/photo/makeup-brush-EXKVSL1OHJ |
 | hero/hero-portrait.webp | Free Indian wedding photo | rawpixel | CC0 | https://www.rawpixel.com/image/5919721/free-indian-wedding-photo-public-domain-cc0 |
@@ -41,4 +41,4 @@ The social-share image (`public/og-image.jpg`) is composed from `hero-portrait.w
 
 ## Before & after panels
 
-`src/assets/images/results/*.webp` were cropped from images supplied by the site owner ("Laser Treatment Facial Hair Before and After.png", "Hair Fall Treatment Before and After.png"). They are shown on the Home page as **illustrative images, not actual client results**, with that disclaimer visible. Replace them with genuine client photos (with written consent) when available, then remove the disclaimer.
+`src/assets/media/results/*.webp` were cropped from images supplied by the site owner ("Laser Treatment Facial Hair Before and After.png", "Hair Fall Treatment Before and After.png"). They are shown on the Home page as **illustrative images, not actual client results**, with that disclaimer visible. Replace them with genuine client photos (with written consent) when available, then remove the disclaimer.

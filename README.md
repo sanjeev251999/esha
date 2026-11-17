@@ -84,16 +84,16 @@ active: true,                       // set to false to hide the offer
 
 ### 4. Gallery → `src/app/content/gallery.content.ts`
 
-1. Copy your photos into `src/assets/images/gallery/`. JPG or WebP; about **1200 px wide** and **under 300 KB** is ideal. Use [squoosh.app](https://squoosh.app) to compress.
+1. Copy your photos into `src/assets/media/gallery/`. JPG or WebP; about **1200 px wide** and **under 300 KB** is ideal. Use [squoosh.app](https://squoosh.app) to compress.
 2. Add or edit entries:
    ```ts
-   { src: 'assets/images/gallery/my-bride.jpg', alt: 'Bridal look with gold jewellery', category: 'Bridal', width: 1200, height: 1500 },
+   { src: 'assets/media/gallery/my-bride.jpg', alt: 'Bridal look with gold jewellery', category: 'Bridal', width: 1200, height: 1500 },
    ```
    `width`/`height` only need the right proportions (portrait 1200×1500, landscape 1200×800). `category` is one of `Bridal`, `Makeup`, `Skin`, `Hair`, `Salon`.
 
 ### Replacing other images
 
-Replace a file in `src/assets/images/` **with the same name** (hero, about, services, offers folders). Keep similar proportions:
+Replace a file in `src/assets/media/` **with the same name** (hero, about, services, offers folders). Keep similar proportions:
 
 | Image | Size |
 | --- | --- |
@@ -150,7 +150,7 @@ src/
 │   │   └── directives/               ← scroll reveal, "Enquire Now" link
 │   ├── app.routes.ts                 ← routes + per-page SEO titles/descriptions
 │   └── app.routes.server.ts          ← which routes are prerendered
-├── assets/images/                    ← hero, about, services, offers, gallery
+├── assets/media/                    ← hero, about, services, offers, gallery
 ├── environments/                     ← siteUrl per environment
 ├── styles/_tokens.scss               ← brand colours, fonts, spacing
 ├── styles/_base.scss                 ← buttons, sections, typography

@@ -24,7 +24,7 @@ import { BUSINESS } from '../../config/business.config';
     <section class="pb-2" aria-label="Current offer">
       <div class="container">
         <div class="promo" appReveal>
-          <img src="assets/images/offers/offers-banner.webp" alt="" width="960" height="641" loading="lazy" decoding="async" />
+          <img src="assets/media/offers/offers-banner.webp" alt="" width="960" height="641" loading="lazy" decoding="async" />
           <div class="promo-body">
             <span class="tag"><app-icon name="gift" /> This month at Esha</span>
             <h2>Ask about this month's <em>special offer</em></h2>

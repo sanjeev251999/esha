@@ -46,10 +46,10 @@ export class Home {
    * shows a clear disclaimer. Replace with real client photos (with consent) when available.
    */
   protected readonly results = [
-    { image: 'assets/images/results/weight-loss.webp', title: 'Body Contouring & Slimming', serviceId: 'body-contouring', alt: 'Illustrative before and after of weight loss treatment' },
-    { image: 'assets/images/results/laser.webp', title: 'Laser Treatment', serviceId: 'laser-treatment', alt: 'Illustrative before and after of laser facial hair removal' },
-    { image: 'assets/images/results/skin.webp', title: 'Skin Treatment', serviceId: 'skin-treatments', alt: 'Illustrative before and after of acne skin treatment' },
-    { image: 'assets/images/results/hair-loss.webp', title: 'Hair Fall Treatment', serviceId: 'hair-treatments', alt: 'Illustrative before and after of hair fall treatment' },
+    { image: 'assets/media/results/weight-loss.webp', title: 'Body Contouring & Slimming', serviceId: 'body-contouring', alt: 'Illustrative before and after of weight loss treatment' },
+    { image: 'assets/media/results/laser.webp', title: 'Laser Treatment', serviceId: 'laser-treatment', alt: 'Illustrative before and after of laser facial hair removal' },
+    { image: 'assets/media/results/skin.webp', title: 'Skin Treatment', serviceId: 'skin-treatments', alt: 'Illustrative before and after of acne skin treatment' },
+    { image: 'assets/media/results/hair-loss.webp', title: 'Hair Fall Treatment', serviceId: 'hair-treatments', alt: 'Illustrative before and after of hair fall treatment' },
   ];
 
   protected readonly highlights:{ icon: IconName; title: string; text: string }[] = [

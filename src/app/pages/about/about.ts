@@ -27,10 +27,10 @@ import { BUSINESS } from '../../config/business.config';
           <div class="col-lg-6">
             <div class="frames" appReveal>
               <div class="arch-frame f1">
-                <img src="assets/images/about/about-main.webp" alt="Makeup artist with a professional brush set" width="720" height="900" loading="lazy" decoding="async" />
+                <img src="assets/media/about/about-main.webp" alt="Makeup artist with a professional brush set" width="720" height="900" loading="lazy" decoding="async" />
               </div>
               <div class="arch-frame f2">
-                <img src="assets/images/services/skin-treatments.webp" alt="Client enjoying a relaxing skin treatment" width="800" height="600" loading="lazy" decoding="async" />
+                <img src="assets/media/services/skin-treatments.webp" alt="Client enjoying a relaxing skin treatment" width="800" height="600" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>

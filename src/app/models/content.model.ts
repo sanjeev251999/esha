@@ -8,7 +8,7 @@ export interface SalonService {
   description: string;
   /** What the service can include. Shown as a short list on the Services page. */
   highlights: string[];
-  /** Path to the image inside src/assets (e.g. "assets/images/services/facial.webp"). */
+  /** Path to the image inside src/assets (e.g. "assets/media/services/facial.webp"). */
   image: string;
   imageAlt: string;
   /**
