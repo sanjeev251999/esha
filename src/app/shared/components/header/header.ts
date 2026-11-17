@@ -33,7 +33,6 @@ export class Header {
     { label: 'Home', path: '/', exact: true },
     { label: 'About', path: '/about' },
     { label: 'Services', path: '/services' },
-    { label: 'Gallery', path: '/gallery' },
     { label: 'Offers', path: '/offers' },
     { label: 'Contact', path: '/contact' },
   ];

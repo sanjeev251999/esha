@@ -16,9 +16,9 @@ No online payments, cart, logins or backend. Enquiries go straight to the centre
 
 | Area | What it does |
 | --- | --- |
-| **Pages** | Home, About, Services, Gallery, Offers, Contact, and the `/enquire` landing page for ads |
+| **Pages** | Home, About, Services, Offers, Contact, and the `/enquire` landing page for ads |
 | **WhatsApp** | Floating chat button on every page. The enquiry form opens WhatsApp with the customer's name, mobile, service, date and message already filled in |
-| **Ad landing page** | `/enquire`: minimal header, tap-a-service picker, offers, form, gallery and a sticky "Enquire / WhatsApp" bar on mobile. `/book`, `/offer` and `/instagram` redirect to it |
+| **Ad landing page** | `/enquire`: minimal header, tap-a-service picker, offers, form and a sticky "Enquire / WhatsApp" bar on mobile. `/book`, `/offer` and `/instagram` redirect to it |
 | **Enquiry form** | Reactive form with validation for required fields, Indian mobile numbers, no past dates and a 500-character message limit. Shows an honest status: opened, blocked by the browser (with a manual button), or WhatsApp not set up yet |
 | **SEO** | Every page is **prerendered to static HTML** at build time, with its own title, description, canonical URL, Open Graph and Twitter tags. Also includes `sitemap.xml`, `robots.txt`, schema.org `BeautySalon` data, favicon set and a 1200×630 share image |
 | **Performance** | Lazy-loaded pages and images, WebP images (8–110 KB each), trimmed Bootstrap build, ~112 KB initial transfer |
@@ -82,15 +82,6 @@ terms: 'Prior booking required',
 active: true,                       // set to false to hide the offer
 ```
 
-### 4. Gallery → `src/app/content/gallery.content.ts`
-
-1. Copy your photos into `src/assets/media/gallery/`. JPG or WebP; about **1200 px wide** and **under 300 KB** is ideal. Use [squoosh.app](https://squoosh.app) to compress.
-2. Add or edit entries:
-   ```ts
-   { src: 'assets/media/gallery/my-bride.jpg', alt: 'Bridal look with gold jewellery', category: 'Bridal', width: 1200, height: 1500 },
-   ```
-   `width`/`height` only need the right proportions (portrait 1200×1500, landscape 1200×800). `category` is one of `Bridal`, `Makeup`, `Skin`, `Hair`, `Salon`.
-
 ### Replacing other images
 
 Replace a file in `src/assets/media/` **with the same name** (hero, about, services, offers folders). Keep similar proportions:
@@ -140,17 +131,17 @@ npm run preview      # serve the production build at http://localhost:4300
 src/
 ├── app/
 │   ├── config/business.config.ts     ← WhatsApp, phone, address, hours
-│   ├── content/                      ← services, offers, gallery (editable content)
+│   ├── content/                      ← services, offers (editable content)
 │   ├── core/services/                ← WhatsApp links, SEO tags, enquiry scroll/preselect
 │   ├── models/                       ← TypeScript interfaces
-│   ├── pages/                        ← home, about, services, gallery, offers, contact, landing, not-found
+│   ├── pages/                        ← home, about, services, offers, contact, landing, not-found
 │   ├── shared/
-│   │   ├── components/               ← header, footer, whatsapp-float, enquiry-form, gallery-grid,
+│   │   ├── components/               ← header, footer, whatsapp-float, enquiry-form,
 │   │   │                               service-card, offer-card, contact-info, cta-band, page-hero, logo, icon
 │   │   └── directives/               ← scroll reveal, "Enquire Now" link
 │   ├── app.routes.ts                 ← routes + per-page SEO titles/descriptions
 │   └── app.routes.server.ts          ← which routes are prerendered
-├── assets/media/                    ← hero, about, services, offers, gallery
+├── assets/media/                    ← hero, about, services, offers, results
 ├── environments/                     ← siteUrl per environment
 ├── styles/_tokens.scss               ← brand colours, fonts, spacing
 ├── styles/_base.scss                 ← buttons, sections, typography

@@ -12,7 +12,6 @@ const pages = [
   { path: '/services', priority: '0.9', changefreq: 'monthly' },
   { path: '/offers', priority: '0.9', changefreq: 'weekly' },
   { path: '/enquire', priority: '0.8', changefreq: 'weekly' },
-  { path: '/gallery', priority: '0.7', changefreq: 'monthly' },
   { path: '/about', priority: '0.6', changefreq: 'yearly' },
   { path: '/contact', priority: '0.8', changefreq: 'yearly' },
 ];

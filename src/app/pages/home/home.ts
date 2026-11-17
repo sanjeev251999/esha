@@ -5,14 +5,12 @@ import { IconName } from '../../shared/components/icon/icons';
 import { SectionHeading } from '../../shared/components/section-heading/section-heading';
 import { ServiceCard } from '../../shared/components/service-card/service-card';
 import { OfferCard } from '../../shared/components/offer-card/offer-card';
-import { GalleryGrid } from '../../shared/components/gallery-grid/gallery-grid';
 import { EnquiryForm } from '../../shared/components/enquiry-form/enquiry-form';
 import { ContactInfo } from '../../shared/components/contact-info/contact-info';
 import { RevealDirective } from '../../shared/directives/reveal.directive';
 import { EnquireLinkDirective } from '../../shared/directives/enquire-link.directive';
 import { SERVICES } from '../../content/services.content';
 import { ACTIVE_OFFERS } from '../../content/offers.content';
-import { GALLERY } from '../../content/gallery.content';
 import { BUSINESS } from '../../config/business.config';
 import { WhatsappService } from '../../core/services/whatsapp.service';
 
@@ -24,7 +22,6 @@ import { WhatsappService } from '../../core/services/whatsapp.service';
     SectionHeading,
     ServiceCard,
     OfferCard,
-    GalleryGrid,
     EnquiryForm,
     ContactInfo,
     RevealDirective,
@@ -38,7 +35,6 @@ export class Home {
   protected readonly b = BUSINESS;
   protected readonly featured = SERVICES.filter((s) => s.featured).slice(0, 6);
   protected readonly offers = ACTIVE_OFFERS.slice(0, 3);
-  protected readonly gallery = GALLERY;
   protected readonly waLink = inject(WhatsappService).quickLink();
 
   /**
@@ -55,7 +51,7 @@ export class Home {
   protected readonly highlights:{ icon: IconName; title: string; text: string }[] = [
     { icon: 'gem', title: 'All Makeups', text: 'Bridal, party & HD looks' },
     { icon: 'sparkles', title: 'Laser & Skin', text: 'Clearer, glowing skin' },
-    { icon: 'flower', title: 'Brows, Mehandi & Tattoo', text: 'Artistry in every detail' },
+    { icon: 'flower', title: 'Brows & Tattoo', text: 'Artistry in every detail' },
     { icon: 'chat', title: 'Easy WhatsApp Booking', text: 'Enquire in under a minute' },
   ];
 

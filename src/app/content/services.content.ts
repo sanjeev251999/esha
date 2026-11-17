@@ -55,17 +55,6 @@ export const SERVICES: SalonService[] = [
     featured: true,
   },
   {
-    id: 'mehandi',
-    name: 'Mehandi',
-    summary: 'Intricate bridal and festive mehandi designs for your special occasions.',
-    description:
-      'From detailed bridal mehandi to simple and elegant designs for festivals, engagements and parties — share your preferred style and we will create a design you love.',
-    highlights: ['Bridal mehandi', 'Arabic & traditional designs', 'Festive & party mehandi', 'Designs for guests'],
-    image: 'assets/media/services/mehandi.webp',
-    imageAlt: 'Intricate mehandi design being applied with a henna cone',
-    featured: true,
-  },
-  {
     id: 'botox-fillers',
     name: 'Botox & Fillers',
     summary: 'Aesthetic injectables for a refreshed, natural look — only after a detailed consultation.',

@@ -2,12 +2,10 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Icon } from '../../shared/components/icon/icon';
 import { EnquiryForm } from '../../shared/components/enquiry-form/enquiry-form';
 import { ContactInfo } from '../../shared/components/contact-info/contact-info';
-import { GalleryGrid } from '../../shared/components/gallery-grid/gallery-grid';
 import { OfferCard } from '../../shared/components/offer-card/offer-card';
 import { RevealDirective } from '../../shared/directives/reveal.directive';
 import { SERVICES } from '../../content/services.content';
 import { ACTIVE_OFFERS } from '../../content/offers.content';
-import { GALLERY } from '../../content/gallery.content';
 import { BUSINESS } from '../../config/business.config';
 import { WhatsappService } from '../../core/services/whatsapp.service';
 import { EnquiryService } from '../../core/services/enquiry.service';
@@ -19,7 +17,7 @@ import { EnquiryService } from '../../core/services/enquiry.service';
  */
 @Component({
   selector: 'app-landing',
-  imports: [Icon, EnquiryForm, ContactInfo, GalleryGrid, OfferCard, RevealDirective],
+  imports: [Icon, EnquiryForm, ContactInfo, OfferCard, RevealDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './landing.html',
   styleUrl: './landing.scss',
@@ -28,7 +26,6 @@ export class Landing {
   protected readonly b = BUSINESS;
   protected readonly services = SERVICES;
   protected readonly offers = ACTIVE_OFFERS.slice(0, 3);
-  protected readonly gallery = GALLERY;
   protected readonly waLink = inject(WhatsappService).quickLink();
   protected readonly enquiry = inject(EnquiryService);
 

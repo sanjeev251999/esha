@@ -15,7 +15,7 @@ export const routes: Routes = [
     data: seo({
       title: 'Beauty, Skin, Hair & Body Clinic in Nagercoil',
       description:
-        'Esha Aesthetic Centre, Nagercoil – laser treatment, skin & hair treatments, body contouring, Botox & fillers, microblading, mehandi, tattoo and bridal makeup. Enquire on WhatsApp.',
+        'Esha Aesthetic Centre, Nagercoil – laser treatment, skin & hair treatments, body contouring, Botox & fillers, microblading, tattoo and bridal makeup. Enquire on WhatsApp.',
     }),
   },
   {
@@ -32,15 +32,7 @@ export const routes: Routes = [
     data: seo({
       title: 'Services – Laser, Skin, Hair, Makeup, Microblading & More',
       description:
-        'Laser treatment, body contouring & slimming, skin and hair treatments, mehandi, Botox & fillers, microblading, tattoo and all makeups at Esha Aesthetic Centre, Nagercoil.',
-    }),
-  },
-  {
-    path: 'gallery',
-    loadComponent: () => import('./pages/gallery/gallery').then((m) => m.Gallery),
-    data: seo({
-      title: 'Gallery',
-      description: 'Browse bridal, makeup, mehandi, tattoo and skin care work from Esha Aesthetic Centre, Nagercoil.',
+        'Laser treatment, body contouring & slimming, skin and hair treatments, Botox & fillers, microblading, tattoo and all makeups at Esha Aesthetic Centre, Nagercoil.',
     }),
   },
   {
@@ -68,7 +60,7 @@ export const routes: Routes = [
       ...seo({
         title: 'Book Your Beauty Appointment',
         description:
-          'Laser, skin, hair & body treatments, microblading, mehandi, tattoo and bridal makeup at Esha Aesthetic Centre, Nagercoil. Tap to enquire on WhatsApp.',
+          'Laser, skin, hair & body treatments, microblading, tattoo and bridal makeup at Esha Aesthetic Centre, Nagercoil. Tap to enquire on WhatsApp.',
       }),
     },
   },

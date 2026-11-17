@@ -38,7 +38,7 @@ import { BUSINESS } from '../../config/business.config';
             <app-section-heading align="start" eyebrow="Who we are" title="Welcome to" accent="our centre" headingId="intro-title" />
             <div appReveal>
               <p class="lead-text">
-                {{ b.name }} in Nagercoil offers advanced aesthetic treatments alongside beauty services — from laser and skin treatments to microblading, mehandi, tattoo and bridal makeup.
+                {{ b.name }} in Nagercoil offers advanced aesthetic treatments alongside beauty services — from laser and skin treatments to microblading, tattoo and bridal makeup.
               </p>
               <p>
                 We believe beauty is personal. That is why we take time to understand your preferences, your skin and hair, and the occasion
@@ -133,7 +133,6 @@ export class About {
     'Body contouring & slimming',
     'Skin treatments',
     'Hair treatments',
-    'Mehandi',
     'Botox & fillers',
     'Microblading',
     'Tattoo',

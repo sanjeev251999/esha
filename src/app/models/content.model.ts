@@ -42,12 +42,3 @@ export interface Offer {
   active: boolean;
 }
 
-export type GalleryCategory = 'Bridal' | 'Makeup' | 'Mehandi' | 'Skin' | 'Hair' | 'Tattoo';
-
-export interface GalleryImage {
-  src: string;
-  alt: string;
-  category: GalleryCategory;
-  width: number;
-  height: number;
-}

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-/** Hero banner for inner pages (About, Services, Gallery, Offers, Contact). */
+/** Hero banner for inner pages (About, Services, Offers, Contact). */
 @Component({
   selector: 'app-page-hero',
   imports: [RouterLink],
