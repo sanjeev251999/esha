@@ -133,7 +133,6 @@ export class About {
     'Body contouring & slimming',
     'Skin treatments',
     'Hair treatments',
-    'Nail art & care',
     'Mehandi',
     'Botox & fillers',
     'Microblading',

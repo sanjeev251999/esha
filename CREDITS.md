@@ -22,7 +22,6 @@ All images were resized, cropped and converted to WebP for fast loading.
 | services/laser-treatment.webp | Woman Massage | StockSnap | CC0 | https://stocksnap.io/photo/woman-massage-U2PRCV7BEQ |
 | services/mehandi.webp | Untitled | rawpixel | CC0 | https://www.rawpixel.com/image/5922607/free-public-domain-cc0-photo |
 | services/microblading.webp | Eyes Eyelashes | StockSnap | CC0 | https://stocksnap.io/photo/eyes-eyelashes-2B47ZJBEU3 |
-| services/nail-art.webp | People Hands | StockSnap | CC0 | https://stocksnap.io/photo/people-hands-XX356Q6EI4 |
 | services/skin-treatments.webp | Woman Skin | StockSnap | CC0 | https://stocksnap.io/photo/woman-skin-HIZNJOUVSY |
 | services/tattoo.webp | Free tattoo artist working image | rawpixel | CC0 | https://www.rawpixel.com/image/5908894/image-public-domain-hands-painting |
 | offers/offers-banner.webp | Spa Concept | StockSnap | CC0 | https://stocksnap.io/photo/spa-concept-PN5KM1RHOG |
@@ -33,7 +32,6 @@ All images were resized, cropped and converted to WebP for fast loading.
 | gallery/gallery-05.webp | Free tattoo artist working image | rawpixel | CC0 | https://www.rawpixel.com/image/5908894/image-public-domain-hands-painting |
 | gallery/gallery-06.webp | Woman Massage | StockSnap | CC0 | https://stocksnap.io/photo/woman-massage-U2PRCV7BEQ |
 | gallery/gallery-07.webp | Free Indian wedding photo | rawpixel | CC0 | https://www.rawpixel.com/image/5924300/free-indian-wedding-photo-public-domain-cc0 |
-| gallery/gallery-08.webp | People Hands | StockSnap | CC0 | https://stocksnap.io/photo/people-hands-5M4DNCN8ZW |
 | gallery/gallery-09.webp | Woman Skin | StockSnap | CC0 | https://stocksnap.io/photo/woman-skin-ETWN6UD9US |
 | gallery/gallery-10.webp | Makeup artist brushes | rawpixel | CC0 | https://www.rawpixel.com/image/6035373/photo-image-public-domain-person-brushes |
 | gallery/gallery-11.webp | Free Indian wedding photo | rawpixel | CC0 | https://www.rawpixel.com/image/5922055/free-indian-wedding-photo-public-domain-cc0 |

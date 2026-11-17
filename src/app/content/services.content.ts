@@ -55,17 +55,6 @@ export const SERVICES: SalonService[] = [
     featured: true,
   },
   {
-    id: 'nail-art',
-    name: 'Nail Art & Care',
-    summary: 'Manicures, pedicures and creative nail art for beautifully finished hands and feet.',
-    description:
-      'Treat your hands and feet to relaxing manicures and pedicures, or choose from elegant and creative nail art designs for everyday wear, festivals and weddings.',
-    highlights: ['Manicure & pedicure', 'Nail art designs', 'Gel & extensions', 'Bridal nails'],
-    image: 'assets/images/services/nail-art.webp',
-    imageAlt: 'Beautician carefully painting nail art',
-    featured: false,
-  },
-  {
     id: 'mehandi',
     name: 'Mehandi',
     summary: 'Intricate bridal and festive mehandi designs for your special occasions.',

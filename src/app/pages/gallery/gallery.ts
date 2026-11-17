@@ -14,7 +14,7 @@ import { GALLERY } from '../../content/gallery.content';
       eyebrow="Gallery"
       title="A glimpse of"
       accent="our world"
-      intro="Bridal looks, mehandi, makeup, tattoo, skin, hair and nail work. Tap any photo to view it larger."
+      intro="Bridal looks, mehandi, makeup, tattoo and skin care work. Tap any photo to view it larger."
     />
     <section class="section pt-4" aria-label="Photo gallery">
       <div class="container">
