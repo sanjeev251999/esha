@@ -41,4 +41,4 @@ The social-share image (`public/og-image.jpg`) is composed from `hero-portrait.w
 
 ## Before & after panels
 
-`src/assets/images/results/*.webp` were cropped from an image supplied by the site owner ("Laser Treatment Facial Hair Before and After.png"). They are shown on the Home page as **illustrative images, not actual client results**, with that disclaimer visible. Replace them with genuine client photos (with written consent) when available, then remove the disclaimer.
+`src/assets/images/results/*.webp` were cropped from images supplied by the site owner ("Laser Treatment Facial Hair Before and After.png", "Hair Fall Treatment Before and After.png"). They are shown on the Home page as **illustrative images, not actual client results**, with that disclaimer visible. Replace them with genuine client photos (with written consent) when available, then remove the disclaimer.
