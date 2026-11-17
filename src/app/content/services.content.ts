@@ -46,10 +46,10 @@ export const SERVICES: SalonService[] = [
   {
     id: 'hair-treatments',
     name: 'Hair Treatments',
-    summary: 'Hair fall & hair loss treatment, scalp care, hair spa and smoothening for healthier hair.',
+    summary: 'Hair fall & hair loss treatment and scalp care for healthier, fuller-looking hair.',
     description:
-      'Worried about hair fall, thinning or a dry, itchy scalp? We assess your hair and scalp and recommend a treatment plan that suits you — from hair loss and scalp treatments to relaxing hair spa and smoothening.',
-    highlights: ['Hair fall & hair loss treatment', 'Scalp care', 'Hair spa', 'Smoothening & keratin care'],
+      'Worried about hair fall, thinning or a dry, itchy scalp? We assess your hair and scalp and recommend a hair loss and scalp treatment plan that suits you.',
+    highlights: ['Hair fall & hair loss treatment', 'Scalp care'],
     image: 'assets/images/services/hair-treatments.webp',
     imageAlt: 'Close-up of thinning hair on the crown – hair loss treatment',
     featured: true,
