@@ -53,6 +53,7 @@ export const BUSINESS: BusinessConfig = {
 
   // Record every enquiry in a Google Sheet (+ email alert). Paste the Apps Script web-app URL
   // here (see scripts/google-sheet-leads.gs). Empty = off: the form only opens WhatsApp.
-  leadCaptureUrl: '',
+  leadCaptureUrl:
+    'https://script.google.com/macros/s/AKfycbyNo_pfz1eG3WOhFPTySw7C2Ww9oelqh37XJRWLdbO7e9BQ3S4NE_5rSisL1o_70665/exec',
   leadCaptureMode: 'save-and-whatsapp',
 };
