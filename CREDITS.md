@@ -12,12 +12,12 @@ All images were resized, cropped and converted to WebP for fast loading.
 | File (in `src/assets/media/`) | Original title | Source | License | Link |
 | --- | --- | --- | --- | --- |
 | hero/hero-bg.webp | Makeup Brush | StockSnap | CC0 | https://stocksnap.io/photo/makeup-brush-EXKVSL1OHJ |
-| hero/hero-portrait.webp | Free Indian wedding photo | rawpixel | CC0 | https://www.rawpixel.com/image/5919721/free-indian-wedding-photo-public-domain-cc0 |
+| hero/hero-portrait.webp | Beauty Skincare | StockSnap | CC0 | https://stocksnap.io/photo/beauty-skincare-LRSAT4NCLS |
 | about/about-main.webp | Makeup artist brushes | rawpixel | CC0 | https://www.rawpixel.com/image/6022176/photo-image-public-domain-person-brushes |
 | about/about-secondary.webp | Person showing hand tattoos | rawpixel | CC0 | https://www.rawpixel.com/image/3285558/free-photo-image-arm-cc0-creative-commons |
 | services/all-makeups.webp | Makeup Artist | StockSnap | CC0 | https://stocksnap.io/photo/makeup-artist-0VSOU0YJF6 |
 | services/body-contouring.webp | Fashion Waist | StockSnap | CC0 | https://stocksnap.io/photo/fashion-waist-VVCEOWJ6GM |
-| services/botox-fillers.webp | Beauty Skincare | StockSnap | CC0 | https://stocksnap.io/photo/beauty-skincare-LRSAT4NCLS |
+| services/botox-fillers.webp | Beauty Skincare | StockSnap | CC0 | https://stocksnap.io/photo/beauty-skincare-CC9TYE8VJY |
 | services/hair-treatments.webp | Hair loss close-up | rawpixel | CC0 | https://www.rawpixel.com/image/5940251/free-public-domain-cc0-photo |
 | services/laser-treatment.webp | Woman Massage | StockSnap | CC0 | https://stocksnap.io/photo/woman-massage-U2PRCV7BEQ |
 | services/mehandi.webp | Untitled | rawpixel | CC0 | https://www.rawpixel.com/image/5922607/free-public-domain-cc0-photo |

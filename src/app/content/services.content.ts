@@ -73,7 +73,7 @@ export const SERVICES: SalonService[] = [
       'Botox and dermal fillers can soften the look of lines and restore volume for a refreshed appearance. We discuss your goals, suitability, the procedure and aftercare in detail before any treatment is planned.',
     highlights: ['Detailed consultation', 'Natural-looking approach', 'Line softening', 'Volume & contour care'],
     image: 'assets/media/services/botox-fillers.webp',
-    imageAlt: 'Close-up of smooth, glowing skin after a skin treatment',
+    imageAlt: 'Woman with smooth, glowing skin applying a serum',
     featured: false,
   },
   {
